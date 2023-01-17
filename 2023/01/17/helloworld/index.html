@@ -10,7 +10,15 @@
   
 
   
+  <meta name="description" content="Nagisa的第一篇博客2023&amp;#x2F;1&amp;#x2F;17
 
+经过本人艰苦卓绝的努力（不是），花费了高额的金钱（也就买了个域名），终于搭建了一个属于小郭的blog。
+[如何在GitHub搭建自己的blog]（[(235条消息) 使用 Github Pages 和 Hexo 搭建自己的独立博客【超">
+  
+
+  
+  
+  <meta name="keywords" content="">
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -101,72 +109,16 @@ var _hmt = _hmt || [];
 </header>
 
         
-        <div class="container ">
+          <div class="container ">
           <div class="row">
-            <main class="site-main posts-loop    col-lg-8 col-lg-offset-1
-                    col-md-8 col-md-offset-1
-                    col-sm-12
-                    col-xs-12">
-            
-  <article class="article-container ">
+            <main class="site-main posts-loop col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container" style="position: inherit;">
+            <article class="article-container ">
 
   
     
-    <h3 class="article-title"><a href="/2023/01/17/markdown的使用/"><span></span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2023/01/17/markdown的使用/" rel="bookmark">
-        <time class="entry-date published" datetime="2023-01-17T06:18:07.050Z">
-          2023-01-17
-        </time>
-      </a>
-    </span>
-    <br />
-    
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-          
-      
-    </div>
-    
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-
-    </div>
-
-    
-  </div>
-  
-    
-    <h3 class="article-read"><a href="/2023/01/17/markdown的使用/"><span>more</span></a></h3>
-    
-  
-</article>
-
-
-
-
-
-  <article class="article-container ">
-
-  
-    
-    <h3 class="article-title"><a href="/2023/01/17/helloworld/"><span></span></a></h3>
+    <h3 class="article-title"><span></span></h3>
     
   
 
@@ -179,6 +131,10 @@ var _hmt = _hmt || [];
       </a>
     </span>
     <br />
+    
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
     
   </div>
 
@@ -214,70 +170,94 @@ var _hmt = _hmt || [];
   </div>
   
     
-    <h3 class="article-read"><a href="/2023/01/17/helloworld/"><span>more</span></a></h3>
     
   
 </article>
+   
+    <div id="toc" class="toc-article ">
+    <div class="toc-title">目录</div>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Nagisa%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text">Nagisa的第一篇博客</span></a></li></ol>
+</div>
 
 
-
-
-
-
-<nav class="pagination">
   
-  
-</nav>
+
+	<!-- async load  -->
+	<script>
+			function async(u, c) {
+				var d = document, t = 'script',
+						o = d.createElement(t),
+						s = d.getElementsByTagName(t)[0];
+				o.src = u;
+				if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+				s.parentNode.insertBefore(o, s);
+			}
+	</script>
+	<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+	<script>
+			async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+					anchors.options = {
+						visible: 'hover',
+						placement: 'left',
+						// icon: '#'
+					};
+					anchors.add().remove('.article-title').remove('.subheading').remove('.sidebar-container h5');
+			})
+	</script>
+	<style>
+			/* place left on bigger screen */
+			@media all and (min-width: 800px) {
+					.anchorjs-link{
+							position: absolute;
+							left: -0.75em;
+							font-size: 1.1em;
+							margin-top : -0.1em;
+					}
+			}
+	</style>
+
+
+
+
+<!-- UY BEGIN -->
+	<div id="gitment-container"></div>
+	<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+	<script src="/js/web-pinyin.js"></script>
+	<script>
+		function toUnicode(s){ 
+			return s.replace(/([\u4E00-\u9FA5]|[\uFE30-\uFFA0])/g,function(){
+			return "\\u" + RegExp["$1"].charCodeAt(0).toString(16);
+			});
+		}
+		var title = ''
+		var GitHub_id = 'Boseny'
+		var client_id = 'f40c67d0359a2646d2b1'
+		var client_secret = '1cbedbd1a1a2e4b42901aee3d7afe1856c1b7e2d'
+		var repo = 'boseny.me'
+		var gitment = new Gitment({
+		// id: '页面 ID', // 可选。默认为 location.href
+		// id:"11" ,
+		id: title,
+		title: title,
+		owner: GitHub_id,//'你的 GitHub ID',
+		repo: repo,//'存储评论的 repo',
+		oauth: {
+			client_id: client_id,//'你的 client ID',
+			client_secret: client_secret,//'你的 client secret',
+		},
+		})
+		gitment.render('gitment-container')
+	</script>
+<!-- UY END -->
+
+
+
+
             </main>
-            <div class="sidebar
-                    col-lg-3 col-lg-offset-0
-                    col-md-3 col-md-offset-0
-                    col-sm-12
-                    col-xs-12
-                    sidebar-container
-                ">
-
-                <div class="sidebar-container">
-
-
-
-<div class="search-container">
-<form class="site-search-form">
-    <span class="glyphicon glyphicon-search"></span><input type="text" id="local-search-input" class="st-search-input" placeholder="Search..." />
-</form>
-<div id="local-search-result" class="local-search-result-cls"></div>
-</div>
-<script type="text/javascript" id="local.search.active">
-var inputArea       = document.querySelector("#local-search-input");
-inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
-inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
-</script>
-
-
-
-
-    <div class="categories-container" style="margin-top:40px;">
-        <p>归档:</p>
-            
-    </div>
-
-
-
-
-    <div class="social-container" style="margin-top:40px;">
-        <p>Links:</p>
-            
-                
-                    <li class="social-item"><i class="fa fa-fw fa-github"></i><a target="_blank" rel="noopener" href="https://github.com/NagisaG">GitHub</a></li>
-                
-            
-    </div>
-
-</div>
-            </div>
           </div>
         </div>
-        
+       
     <footer class="site-footer">
   <p class="site-info">
     Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
