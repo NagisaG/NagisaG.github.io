@@ -62,7 +62,7 @@
 			</ul>
 		</nav>
                    <nav>
-                               总文章数 3
+                               总文章数 4
                    </nav>
 
 		<nav class="header-smart-menu">
@@ -88,7 +88,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">2.5k</span>
+    总字数 <span class="post-count">3.1k</span>
 </nav>
 
     </div>
@@ -153,6 +153,142 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python的数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/24/Python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Python的数据类型</a>
+    </h1>
+  
+
+        
+        <a href="/2023/01/24/Python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2023-01-23T16:58:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-24</time>
+</a>
+        
+      </header>
+<div align="center" class="post-count">
+    字数：511字 | 预计阅读时长：2分钟
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-整型int-x2F-int函数"><a href="#1-整型int-x2F-int函数" class="headerlink" title="1.整型int&#x2F;int函数"></a>1.整型int&#x2F;int函数</h1><p>int 或 integer，是一个整数，正负，不带小数，长度不限。（理论上不限，但是机器的内存有限，实际与内存有关）。int函数可以将一个指定进制的数字型字符串或者十进制数字转化为整形。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>(<span class="built_in">object</span>,base)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>object</td>
+<td>一个数字或字符串参数</td>
+<td>1.数字参数可以是整数、浮点数（小数点表示和指数e表示皆可)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>2.字符串参数仅能包含在指定进制下所涵盖的字符</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>3.该参数可省略</td>
+</tr>
+<tr>
+<td>base</td>
+<td>进制数</td>
+<td>该参数可省略，省略时默认为10正整型参数，表示object所对应的进制</td>
+</tr>
+</tbody></table>
+<h2 id="1-1注意事项"><a href="#1-1注意事项" class="headerlink" title="1.1注意事项"></a>1.1注意事项</h2><ol>
+<li>所有参数都省略时，返回整数0</li>
+<li>试图将一个浮点数字符串转化为十进制整数时，会报错</li>
+<li>Python会自动计算base参数的使用范围。若超出范围会报错</li>
+<li>当object参数中存在非法字符时，Python报错</li>
+<li>二进制符号0b、八进制符号0o、十六进制符号0x加入数字字符串中对结果没有影响，且可以省略</li>
+<li>合法的数字字符字母不区分大小写</li>
+</ol>
+<h1 id="2-浮点型float"><a href="#2-浮点型float" class="headerlink" title="2.浮点型float"></a>2.浮点型float</h1><p>浮点数或“浮点数”是包含一位或多位小数的正数或负数。</p>
+<h1 id="3-复数型complex"><a href="#3-复数型complex" class="headerlink" title="3.复数型complex"></a>3.复数型complex</h1><p>复数（Complex）是 Python 的内置类型，直接书写即可。换句话说，Python 语言本身就支持复数，而不依赖于标准库或者第三方库。</p>
+<p>复数由实部（real）和虚部（imag）构成，在 Python 中，复数的虚部以j或者J作为后缀，具体格式为：<br>a + bj</p>
+<p>a 表示实部，b 表示虚部。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">c1 = <span class="number">12</span> + <span class="number">0.2j</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1Value: &quot;</span>, c1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1Type&quot;</span>, <span class="built_in">type</span>(c1))</span><br><span class="line">c2 = <span class="number">6</span> - <span class="number">1.2j</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c2Value: &quot;</span>, c2)</span><br><span class="line"><span class="comment">#对复数进行简单计算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1+c2: &quot;</span>, c1+c2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1*c2: &quot;</span>, c1*c2)</span><br><span class="line"><span class="comment">#运行结果：</span></span><br><span class="line">c1Value:  (<span class="number">12</span>+<span class="number">0.2j</span>)</span><br><span class="line">c1Type &lt;<span class="keyword">class</span> <span class="string">&#x27;complex&#x27;</span>&gt;</span><br><span class="line">c2Value:  (<span class="number">6</span>-<span class="number">1.2j</span>)</span><br><span class="line">c1+c2:  (<span class="number">18</span>-<span class="number">1j</span>)</span><br><span class="line">c1*c2:  (<span class="number">72.24</span>-<span class="number">13.2j</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/01/24/Python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python的基础使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,7 +307,7 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：1.8k字 | 预计阅读时长：6分钟
+    字数：1.9k字 | 预计阅读时长：7分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
