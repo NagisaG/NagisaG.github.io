@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Python的数据类型 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.整型int&#x2F;int函数int 或 integer，是一个整数，正负，不带小数，长度不限。（理论上不限，但是机器的内存有限，实际与内存有关）。int函数可以将一个指定进制的数字型字符串或者十进制数字转化为整形。 1int(object,base)     名称 说明 备注    object 一个数字或字符串参数 1.数字参数可以是整数、浮点数（小数点表示和指数e表示皆可)     2">
+  <meta name="description" content="本文主要介绍Python中的数据类型使用方法和注意事项。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python的数据类型">
 <meta property="og:url" content="http://example.com/2023/01/24/Python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.整型int&#x2F;int函数int 或 integer，是一个整数，正负，不带小数，长度不限。（理论上不限，但是机器的内存有限，实际与内存有关）。int函数可以将一个指定进制的数字型字符串或者十进制数字转化为整形。 1int(object,base)     名称 说明 备注    object 一个数字或字符串参数 1.数字参数可以是整数、浮点数（小数点表示和指数e表示皆可)     2">
+<meta property="og:description" content="本文主要介绍Python中的数据类型使用方法和注意事项。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-23T16:58:29.000Z">
-<meta property="article:modified_time" content="2023-01-23T17:35:16.701Z">
+<meta property="article:modified_time" content="2023-01-23T17:39:54.017Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -174,12 +174,15 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：511字 | 预计阅读时长：2分钟
+    字数：533字 | 预计阅读时长：2分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-整型int-x2F-int函数"><a href="#1-整型int-x2F-int函数" class="headerlink" title="1.整型int&#x2F;int函数"></a>1.整型int&#x2F;int函数</h1><p>int 或 integer，是一个整数，正负，不带小数，长度不限。（理论上不限，但是机器的内存有限，实际与内存有关）。int函数可以将一个指定进制的数字型字符串或者十进制数字转化为整形。</p>
+        <p>本文主要介绍Python中的数据类型使用方法和注意事项。</p>
+<span id="more"></span>
+
+<h1 id="1-整型int-x2F-int函数"><a href="#1-整型int-x2F-int函数" class="headerlink" title="1.整型int&#x2F;int函数"></a>1.整型int&#x2F;int函数</h1><p>int 或 integer，是一个整数，正负，不带小数，长度不限。（理论上不限，但是机器的内存有限，实际与内存有关）。int函数可以将一个指定进制的数字型字符串或者十进制数字转化为整形。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>(<span class="built_in">object</span>,base)</span><br></pre></td></tr></table></figure>
 
 <table>
@@ -224,7 +227,6 @@
 <p>复数由实部（real）和虚部（imag）构成，在 Python 中，复数的虚部以j或者J作为后缀，具体格式为：<br>a + bj</p>
 <p>a 表示实部，b 表示虚部。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">c1 = <span class="number">12</span> + <span class="number">0.2j</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1Value: &quot;</span>, c1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1Type&quot;</span>, <span class="built_in">type</span>(c1))</span><br><span class="line">c2 = <span class="number">6</span> - <span class="number">1.2j</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c2Value: &quot;</span>, c2)</span><br><span class="line"><span class="comment">#对复数进行简单计算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1+c2: &quot;</span>, c1+c2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1*c2: &quot;</span>, c1*c2)</span><br><span class="line"><span class="comment">#运行结果：</span></span><br><span class="line">c1Value:  (<span class="number">12</span>+<span class="number">0.2j</span>)</span><br><span class="line">c1Type &lt;<span class="keyword">class</span> <span class="string">&#x27;complex&#x27;</span>&gt;</span><br><span class="line">c2Value:  (<span class="number">6</span>-<span class="number">1.2j</span>)</span><br><span class="line">c1+c2:  (<span class="number">18</span>-<span class="number">1j</span>)</span><br><span class="line">c1*c2:  (<span class="number">72.24</span>-<span class="number">13.2j</span>)</span><br></pre></td></tr></table></figure>
-
 
 
 
