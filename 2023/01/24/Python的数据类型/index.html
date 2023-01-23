@@ -16,7 +16,7 @@
 <meta property="og:description" content="本文主要介绍Python中的数据类型使用方法和注意事项。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-23T16:58:29.000Z">
-<meta property="article:modified_time" content="2023-01-23T17:39:54.017Z">
+<meta property="article:modified_time" content="2023-01-23T17:42:35.132Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -223,9 +223,7 @@
 <li>合法的数字字符字母不区分大小写</li>
 </ol>
 <h1 id="2-浮点型float"><a href="#2-浮点型float" class="headerlink" title="2.浮点型float"></a>2.浮点型float</h1><p>浮点数或“浮点数”是包含一位或多位小数的正数或负数。</p>
-<h1 id="3-复数型complex"><a href="#3-复数型complex" class="headerlink" title="3.复数型complex"></a>3.复数型complex</h1><p>复数（Complex）是 Python 的内置类型，直接书写即可。换句话说，Python 语言本身就支持复数，而不依赖于标准库或者第三方库。</p>
-<p>复数由实部（real）和虚部（imag）构成，在 Python 中，复数的虚部以j或者J作为后缀，具体格式为：<br>a + bj</p>
-<p>a 表示实部，b 表示虚部。</p>
+<h1 id="3-复数型complex"><a href="#3-复数型complex" class="headerlink" title="3.复数型complex"></a>3.复数型complex</h1><p>复数（Complex）是 Python 的内置类型，直接书写即可。换句话说，Python 语言本身就支持复数，而不依赖于标准库或者第三方库。复数由实部（real）和虚部（imag）构成，在 Python 中，复数的虚部以j或者J作为后缀，具体格式为：a + bj。（a 表示实部，b 表示虚部）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">c1 = <span class="number">12</span> + <span class="number">0.2j</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1Value: &quot;</span>, c1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1Type&quot;</span>, <span class="built_in">type</span>(c1))</span><br><span class="line">c2 = <span class="number">6</span> - <span class="number">1.2j</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c2Value: &quot;</span>, c2)</span><br><span class="line"><span class="comment">#对复数进行简单计算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1+c2: &quot;</span>, c1+c2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c1*c2: &quot;</span>, c1*c2)</span><br><span class="line"><span class="comment">#运行结果：</span></span><br><span class="line">c1Value:  (<span class="number">12</span>+<span class="number">0.2j</span>)</span><br><span class="line">c1Type &lt;<span class="keyword">class</span> <span class="string">&#x27;complex&#x27;</span>&gt;</span><br><span class="line">c2Value:  (<span class="number">6</span>-<span class="number">1.2j</span>)</span><br><span class="line">c1+c2:  (<span class="number">18</span>-<span class="number">1j</span>)</span><br><span class="line">c1*c2:  (<span class="number">72.24</span>-<span class="number">13.2j</span>)</span><br></pre></td></tr></table></figure>
 
 
