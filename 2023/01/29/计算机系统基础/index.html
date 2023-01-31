@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210121090349881.png?,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhb2ppZV9kdWFu,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2021011714554763.png?,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhb2ppZV9kdWFu,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2023-01-29T15:33:59.000Z">
-<meta property="article:modified_time" content="2023-01-29T16:16:59.302Z">
+<meta property="article:modified_time" content="2023-01-31T07:24:43.195Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary">
@@ -96,7 +96,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">4.2k</span>
+    总字数 <span class="post-count">4.5k</span>
 </nav>
 
     </div>
@@ -179,7 +179,7 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：1.1k字 | 预计阅读时长：3分钟
+    字数：1.4k字 | 预计阅读时长：4分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -189,7 +189,7 @@
 
 <h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="冯诺依曼结构"><a href="#冯诺依曼结构" class="headerlink" title="冯诺依曼结构"></a>冯诺依曼结构</h2><p>冯诺依曼结构的关键：程序、实现存储。</p>
 <blockquote>
-<p>早期的冯·诺依曼机以运算器为中心，且是单处理机，<strong>最根本的特征</strong>是采用“<strong>存储程序</strong>”原理，基本工作方式是控制流驱动方式！</p>
+<p>早期的冯·诺依曼机以运算器为中心，且是单处理机，<strong>最根本的特征</strong>是采用“<strong>存储程序</strong>”原理，基本工作方式是<em><strong>控制流驱动方式</strong></em>！</p>
 </blockquote>
 <p>冯诺依曼结构的计算机主要包含五个部分：运算器，寄存器，<em><strong>控制器</strong></em>，I&#x2F;O。其中：</p>
 <ol>
@@ -204,9 +204,13 @@
 <p>MAR存放欲访问的存储单元地址；MDR存放从存储单元取来的数据！</p>
 <p>地址译码器是主存的构成部分，不属于CPU；地址寄存器虽然一般属于主存，但是现代计算机中绝大多数CPU内集成了地址寄存器！</p>
 <p>关于CPU存取速度的比较：寄存器（CPU内部）&gt; Cache(高速的SRAM) &gt; 内存 （SDRAM）</p>
+<blockquote>
+<p>距离CPU越近，存取速度越快。</p>
+</blockquote>
 </blockquote>
 <h2 id="指令与程序"><a href="#指令与程序" class="headerlink" title="指令与程序"></a>指令与程序</h2><p>计算机内部由二进制表示指令和数据，其中指令由操作码和地址码组成。一串指令组成程序。</p>
-<h2 id="计算机如何工作"><a href="#计算机如何工作" class="headerlink" title="计算机如何工作"></a>计算机如何工作</h2><p>计算机的工作流程分为七步：</p>
+<h2 id="计算机如何工作"><a href="#计算机如何工作" class="headerlink" title="计算机如何工作"></a>计算机如何工作</h2><p>执行前：数据和指令应事先放在存储器中，每条指令和每个数据都有相应的地址，指令按顺序存放，由OP和ADDR组成，起始地址置于PC。</p>
+<p>计算机的工作流程分为七步：</p>
 <ol>
 <li>根据PC取指令</li>
 <li>指令译码</li>
@@ -216,7 +220,6 @@
 <li>PC+1</li>
 <li>执行下一条指令</li>
 </ol>
-<p>执行前：数据和指令应事先放在存储器中，每条指令和每个数据都有相应的地址，指令按顺序存放，由OP和ADDR组成，起始地址置于PC。</p>
 <h2 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h2><p>由<strong>高级语言转换到汇编语言</strong>的过程叫做<em><strong>编译</strong></em>，由<strong>汇编语言转换到机器语言</strong>的过程叫做<em><strong>汇编</strong></em>，边翻译边执行的叫做<em><strong>解析</strong></em>。</p>
 <h3 id="机器语言"><a href="#机器语言" class="headerlink" title="机器语言"></a>机器语言</h3><p>人看不懂，机器看得懂，所以运行效率高，但是写着很麻烦。<strong>机器语言是计算机唯一可以直接识别和执行的语言。</strong></p>
 <h3 id="汇编语言"><a href="#汇编语言" class="headerlink" title="汇编语言"></a>汇编语言</h3><p>用助记符和标号（与机器指令一一对应）来表示指令的语言。</p>
@@ -233,8 +236,13 @@
 <p>缺点：描述复杂程序过长，不同结构的机器上无法运行（Java::smirk:Program once running everywhere）</p>
 <p><em><strong>机器语言和汇编语言都是面向机器结构的语言，所以是机器级语言</strong></em></p>
 <h4 id="编译和解释"><a href="#编译和解释" class="headerlink" title="编译和解释"></a>编译和解释</h4><p>编译：将高级语言的源程序转换为机器语言目标程序，执行时只需启动目标程序即可（生成可执行文件）</p>
-<p>解释：将高级语言逐条翻译成机器指令并立即执行，不生成目标文件（无可执行文件）</p>
+<p>解释：将高级语言逐条翻译成机器指令并立即执行，不生成目标文件（无可执行文件），<em><strong>翻译一条后立即执行这条语句，运行速度较慢，效率比较低，但是跨平台性较好</strong></em>。</p>
 <h3 id="高级语言"><a href="#高级语言" class="headerlink" title="高级语言"></a>高级语言</h3><p>高级语言(如C、C++、Java等)是为方便程序设计人员写出解决问题的处理方案和解题过程的程序。通常高级语言需要经过编译程序编译成汇编语言程序，然后经过汇编操作得到机器语言程序，或直接由高级语言程序翻译成机器语言程序。</p>
+<h2 id="计算机系统层次结构"><a href="#计算机系统层次结构" class="headerlink" title="计算机系统层次结构"></a>计算机系统层次结构</h2><p>硬件系统和软件系统共同构成了一个完整的计算机系统。其中<em><strong>硬件</strong></em>是指有形的物理设备，是计算机系统中实际物理装置的总称，<em><strong>软件</strong></em>是指在硬件上运行的程序和相关的数据及文档。</p>
+<p>对某一功能来说，其既可以用软件实现，又可以用硬件实现，则称为软硬件在逻辑上是等效的。</p>
+<h3 id="计算机软件"><a href="#计算机软件" class="headerlink" title="计算机软件"></a>计算机软件</h3><p>软件按其功能分类，分为系统软件和应用软件。</p>
+<p><strong>系统软件</strong>是一组保证计算机系统高效正确运行的基础软件，通常作为系统资源提供给用户使用。主要有：<em><strong>操作系统，数据库管理系统，语言处理程序，分布式软件系统，网络软件系统，标准库程序，服务性程序</strong></em></p>
+<p><strong>应用软件</strong>是用户为解决某个领域中的各类问题而编制的程序</p>
 
       
 
@@ -358,7 +366,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">冯诺依曼结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E4%B8%8E%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">指令与程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text">计算机如何工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.</span> <span class="toc-text">计算机语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.1.</span> <span class="toc-text">机器语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.2.</span> <span class="toc-text">汇编语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%92%8C%E8%A7%A3%E9%87%8A"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">编译和解释</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.3.</span> <span class="toc-text">高级语言</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">冯诺依曼结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E4%B8%8E%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">指令与程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text">计算机如何工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.</span> <span class="toc-text">计算机语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.1.</span> <span class="toc-text">机器语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.2.</span> <span class="toc-text">汇编语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%92%8C%E8%A7%A3%E9%87%8A"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">编译和解释</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.3.</span> <span class="toc-text">高级语言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">1.5.</span> <span class="toc-text">计算机系统层次结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.5.1.</span> <span class="toc-text">计算机软件</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
