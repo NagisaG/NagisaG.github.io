@@ -19,8 +19,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2021011714554763.png?,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhb2ppZV9kdWFu,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210117190721548.png?,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhb2ppZV9kdWFu,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210117191955803.png?,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhb2ppZV9kdWFu,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210118121332468.png?,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhb2ppZV9kdWFu,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2023-01-29T15:33:59.000Z">
-<meta property="article:modified_time" content="2023-02-09T16:24:54.296Z">
+<meta property="article:modified_time" content="2023-02-25T05:11:35.960Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary">
@@ -74,7 +75,7 @@
 			</ul>
 		</nav>
                    <nav>
-                               总文章数 6
+                               总文章数 7
                    </nav>
 
 		<nav class="header-smart-menu">
@@ -98,7 +99,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">6.4k</span>
+    总字数 <span class="post-count">6.9k</span>
 </nav>
 
     </div>
@@ -181,7 +182,7 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：1.9k字 | 预计阅读时长：6分钟
+    字数：2.4k字 | 预计阅读时长：8分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -280,6 +281,30 @@
 <blockquote>
 <p>相同位数的补码和移码具有相同的数据表示范围</p>
 <p>零的补码和移码表示不同：1000（移码），0000（补码）</p>
+</blockquote>
+<h1 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h1><h2 id="存储器概述"><a href="#存储器概述" class="headerlink" title="存储器概述"></a>存储器概述</h2><h3 id="按照在计算机的作用分类"><a href="#按照在计算机的作用分类" class="headerlink" title="按照在计算机的作用分类"></a>按照在计算机的作用分类</h3><ol>
+<li><em><strong>主存储器</strong></em>，简称主存，又称为内存，CPU可以直接随机进行访问，可与cache等交换数据，特点：容量小，存取速度快，价格高</li>
+<li><em><strong>辅助存储器</strong></em> 辅存，又称外存，存放永久性信息，调入主存后才能被CPU访问。特点：容量大，存取速度慢，便宜</li>
+<li>高速缓冲器：Cache，位于主存和CPU之间，速度与CPU匹配，容量小，贵。</li>
+</ol>
+<h2 id="按存储介质分类"><a href="#按存储介质分类" class="headerlink" title="按存储介质分类"></a>按存储介质分类</h2><p>磁表面，磁芯，半导体，光存</p>
+<h2 id="按存取方式分类"><a href="#按存取方式分类" class="headerlink" title="按存取方式分类"></a>按存取方式分类</h2><ol>
+<li>RAM：存储器的任意存储单元都可以随机存取，且与物理位置无关，优点：<strong>读写方便，使用灵活</strong></li>
+<li>ROM：只能随机读出，不能写入。断电内容不会丢失，与RAM共同构成主存的一部分。</li>
+<li>穿行访问存储器：需要按照物理位置的先后顺序寻址，包括顺序存储存储器（磁带）和直接存取存储器（磁盘，光盘）</li>
+</ol>
+<blockquote>
+<p>顺序存储：磁带，参考<em><strong>磁带需要倒带等操作</strong></em></p>
+</blockquote>
+<h2 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h2><p>主存由<strong>DRAM</strong>实现，靠近处理器的Cache由<strong>SRAM</strong>组成，都属于易失性存储器。DRAM速度较慢，较便宜。</p>
+<p><em><strong>SRAM</strong></em>存取速度快，集成度低，功耗大，价格昂贵。</p>
+<p><em><strong>DARM</strong></em>易集成，价位低，容量大，功耗低。依靠电荷存储信息，需要刷新，异步刷新不存在“死时间”。刷新对CPU透明，根据行刷新（<em><strong>所以Cache一般行少</strong></em>）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210118121332468.png?,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhb2ppZV9kdWFu,size_16,color_FFFFFF,t_70"></p>
+<h2 id="只读存储器（ROM）"><a href="#只读存储器（ROM）" class="headerlink" title="只读存储器（ROM）"></a>只读存储器（ROM）</h2><p>ROM结构简单，位密度比可读写存储器高，具有非易失性，可靠性高。</p>
+<h3 id="ROM分类"><a href="#ROM分类" class="headerlink" title="ROM分类"></a>ROM分类</h3><p>ROM可分为：MROM，PROM，EPROM,Flash和SSD</p>
+<blockquote>
+<p>计算DRAM引脚数：地址线<em><strong>引脚复用技术</strong></em>（行列减半）+数据线+<em><strong>行通选+列通选</strong></em>+读&#x2F;写控制线（根据题意选择）</p>
+<p><em><strong>U盘又称闪存（Flash），所以是ROM类型存储器</strong></em></p>
 </blockquote>
 
       
@@ -413,7 +438,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">冯诺依曼结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E4%B8%8E%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">指令与程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text">计算机如何工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.</span> <span class="toc-text">计算机语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.1.</span> <span class="toc-text">机器语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.2.</span> <span class="toc-text">汇编语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%92%8C%E8%A7%A3%E9%87%8A"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">编译和解释</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.3.</span> <span class="toc-text">高级语言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">1.5.</span> <span class="toc-text">计算机系统层次结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.5.1.</span> <span class="toc-text">计算机软件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E7%BA%A7%E6%95%B0%E6%8D%AE"><span class="toc-number">2.1.</span> <span class="toc-text">机器级数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.2.</span> <span class="toc-text">数值数据的表示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81"><span class="toc-number">2.2.1.</span> <span class="toc-text">二进制编码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%A0%81"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">原码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%BB%E7%A0%81"><span class="toc-number">2.2.1.2.</span> <span class="toc-text">移码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E7%A0%81"><span class="toc-number">2.2.1.3.</span> <span class="toc-text">补码</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">冯诺依曼结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E4%B8%8E%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">指令与程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text">计算机如何工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.</span> <span class="toc-text">计算机语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.1.</span> <span class="toc-text">机器语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.2.</span> <span class="toc-text">汇编语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%92%8C%E8%A7%A3%E9%87%8A"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">编译和解释</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.3.</span> <span class="toc-text">高级语言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">1.5.</span> <span class="toc-text">计算机系统层次结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.5.1.</span> <span class="toc-text">计算机软件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E7%BA%A7%E6%95%B0%E6%8D%AE"><span class="toc-number">2.1.</span> <span class="toc-text">机器级数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.2.</span> <span class="toc-text">数值数据的表示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81"><span class="toc-number">2.2.1.</span> <span class="toc-text">二进制编码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%A0%81"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">原码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%BB%E7%A0%81"><span class="toc-number">2.2.1.2.</span> <span class="toc-text">移码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E7%A0%81"><span class="toc-number">2.2.1.3.</span> <span class="toc-text">补码</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="toc-number">3.</span> <span class="toc-text">第六章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%A6%82%E8%BF%B0"><span class="toc-number">3.1.</span> <span class="toc-text">存储器概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E4%BD%9C%E7%94%A8%E5%88%86%E7%B1%BB"><span class="toc-number">3.1.1.</span> <span class="toc-text">按照在计算机的作用分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E5%88%86%E7%B1%BB"><span class="toc-number">3.2.</span> <span class="toc-text">按存储介质分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E5%AD%98%E5%8F%96%E6%96%B9%E5%BC%8F%E5%88%86%E7%B1%BB"><span class="toc-number">3.3.</span> <span class="toc-text">按存取方式分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">3.4.</span> <span class="toc-text">主存储器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E8%AF%BB%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88ROM%EF%BC%89"><span class="toc-number">3.5.</span> <span class="toc-text">只读存储器（ROM）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ROM%E5%88%86%E7%B1%BB"><span class="toc-number">3.5.1.</span> <span class="toc-text">ROM分类</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
