@@ -88,7 +88,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">33.2k</span>
+    总字数 <span class="post-count">35.7k</span>
 </nav>
 
     </div>
@@ -173,7 +173,7 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：1.7k字 | 预计阅读时长：5分钟
+    字数：4.3k字 | 预计阅读时长：15分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -308,6 +308,157 @@
 <li><p>停止条件（Stop Condition）：主设备发送停止条件来结束I2C通信。停止条件是将SCL从低电平拉高，接着拉高SDA。</p>
 </li>
 </ol>
+<h2 id="嵌入式软件的独特性"><a href="#嵌入式软件的独特性" class="headerlink" title="嵌入式软件的独特性"></a>嵌入式软件的独特性</h2><p>1)规模小，但开发难度不一定小；</p>
+<p>2)快速启动，直接运行；</p>
+<p>3)实时性和可靠性要求高；</p>
+<p>4)应用程序和操作系统一体化；</p>
+<p>5)开发平台和运行平台不同。</p>
+<h1 id="ARM处理器体系结构"><a href="#ARM处理器体系结构" class="headerlink" title="ARM处理器体系结构"></a>ARM处理器体系结构</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>字节（Byte）：在ARM体系结构和8位&#x2F;16位处理器体系结构中，字节的长度均为8位。</p>
+<p>字（Word）：在ARM体系结构中，字的长度为32位，而在8位&#x2F;16位处理器体系结构中，字的长度一般为16位。 （注：字必须与4字节的边界对准。）</p>
+<p>半字：在ARM体系结构中，半字的长度为16位，与8位&#x2F;16位处理器体系结构中字的长度一致。（注：半字必须与2字节的边界对准。）</p>
+<h2 id="寻址空间"><a href="#寻址空间" class="headerlink" title="寻址空间"></a>寻址空间</h2><p>ARM是RISC体系，32位读取存储框架</p>
+<p>线性存储地址，空间大小位4G</p>
+<h2 id="工作状态"><a href="#工作状态" class="headerlink" title="工作状态"></a>工作状态</h2><p>ARM指令存储结构：32位</p>
+<p>THUMB指令存储结构：16位</p>
+<p><em><strong>ARM微处理器的工作状态由两种：ARM状态和Thumb状态</strong></em></p>
+<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p>当系统具有32位的数据总线宽度时,ARM比THUMB有更好的性能表现<br>当系统的数据总线宽度小于32位时,THUMB比ARM性能更好(比如16的存储器,1条ARM指令需要两个存储器访问周期)<br>代码尺寸<br>同样一段C代码,用THUMB指令编译的结果,其长度只占ARM编译结果的65%左右</p>
+<p>THUMB指令集在功能上只是ARM指令集的一个子集，某些功能只能在ARM状态下执行,如CPSR和协处理器的访问。进行异常响应时,处理器会自动进入ARM状态。即使是一个单纯的THUMB应用系统,必须加一个汇编的交互头程序,因为系统总是自动从ARM开始启动。</p>
+<h3 id="处理器状态切换"><a href="#处理器状态切换" class="headerlink" title="处理器状态切换"></a>处理器状态切换</h3><p>进入Thumb状态：当操作数寄存器的状态位(位[0])为1时，执行BX指令进入Thumb状态。如果处理器在Thumb状态进入异常，则当异常处理返回时，自动转换到Thumb状态。</p>
+<p>进入ARM状态：当操作数寄存器的状态位(位[0])为0时执行BX指令进入ARM状态。当处理器进行异常处理时，进入ARM状态从异常向量地址处开始执行。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">;从Arm状态切换到Thumb状态</span><br><span class="line">    LDR    R0,=Lable+<span class="number">1</span></span><br><span class="line">    BX     R0</span><br><span class="line">;从Thumb状态切换到ARM状态</span><br><span class="line">    LDR    R0,=Lable</span><br><span class="line">    BX     R0</span><br></pre></td></tr></table></figure>
+
+<h3 id="存储格式"><a href="#存储格式" class="headerlink" title="存储格式"></a>存储格式</h3><p><em><strong>大端格式：字数据的高字节存储在低地址中，而字数据的低字节则存放在高地址中。</strong></em></p>
+<p>***小端格式：低地址中存放的是字数据的低字节，高地址存放的是字数据的高字节。 ***</p>
+<h3 id="处理器模式"><a href="#处理器模式" class="headerlink" title="处理器模式"></a>处理器模式</h3><p>八种处理器模式，除了用户模式都是特权模式，除了用户模式和系统模式都是异常模式。</p>
+<p><em><strong>特权模式：除用户模式外，其它模式均为特权模式。ARM内部寄存器和一些片内外设在硬件设计上只允许（或者可选为只允许）特权模式下访问。此外，特权模式可以自由的切换处理器模式，而用户模式不能直接切换到别的模式。</strong></em></p>
+<p><em><strong>异常模式：这六种模式称为异常模式。它们除了可以通过程序切换进入外，也可以由特定的异常进入。当特定的异常出现时，处理器进入相应的模式。每种异常模式都有一些独立的寄存器，以避免异常退出时用户模式的状态不可靠。</strong></em></p>
+<p>用户和系统模式：两种模式都不能由异常进入，而且它们使用完全相同的寄存器组。系统模式是特权模式，不受用户模式的限制。操作系统在该模式下访问用户模式的寄存器就比较方便，而且操作系统的一些特权任务可以使用这个模式访问一些受控的资源。</p>
+<p>模式切换：通过修改CPSR（Current Program Status Register）寄存器的特定位，可以实现处理器模式的切换。CPSR寄存器存储了处理器的状态信息，包括当前的处理器模式。</p>
+<p><em><strong>切换处理器模式的步骤如下：</strong></em></p>
+<ol>
+<li><p><em><strong>将当前的CPSR寄存器的值读取到一个普通寄存器中，以保存当前的处理器模式。</strong></em></p>
+</li>
+<li><p><em><strong>修改普通寄存器中的对应位，以设置新的处理器模式。</strong></em></p>
+</li>
+<li><p><em><strong>将修改后的普通寄存器的值移动到CPSR寄存器中，从而切换到新的处理器模式。</strong></em></p>
+</li>
+</ol>
+<h3 id="寄存器组织"><a href="#寄存器组织" class="headerlink" title="寄存器组织"></a>寄存器组织</h3><p>有40个物理寄存器，有18个可编程访问的寄存器。</p>
+<p>R14寄存器与子程序调用：程序A执行过程中调用程序B；程序跳转至标号Lable，执行程序B。同时硬件将“BL Lable”指令的下一条指令所在地址存入R14；程序B执行最后，将R14寄存器的内容放入PC，返回程序A；</p>
+<table>
+<thead>
+<tr>
+<th><strong>条件码</strong></th>
+<th><strong>助记符后缀</strong></th>
+<th><strong>标 志</strong></th>
+<th><strong>含 义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>0000</strong></td>
+<td><strong>EQ</strong></td>
+<td><strong>Z****置位</strong></td>
+<td><strong>相等</strong></td>
+</tr>
+<tr>
+<td><strong>0001</strong></td>
+<td><strong>NE</strong></td>
+<td><strong>Z****清零</strong></td>
+<td><strong>不相等</strong></td>
+</tr>
+<tr>
+<td><strong>0010</strong></td>
+<td><strong>CS&#x2F;HS</strong></td>
+<td><strong>C****置位</strong></td>
+<td><strong>无符号数大于或等于</strong></td>
+</tr>
+<tr>
+<td><strong>0011</strong></td>
+<td><strong>CC&#x2F;LO</strong></td>
+<td><strong>C****清零</strong></td>
+<td><strong>无符号数小于</strong></td>
+</tr>
+<tr>
+<td><strong>0100</strong></td>
+<td><strong>MI</strong></td>
+<td><strong>N****置位</strong></td>
+<td><strong>负数</strong></td>
+</tr>
+<tr>
+<td><strong>0101</strong></td>
+<td><strong>PL</strong></td>
+<td><strong>N****清零</strong></td>
+<td><strong>正数或零</strong></td>
+</tr>
+<tr>
+<td><strong>0110</strong></td>
+<td><strong>VS</strong></td>
+<td><strong>V****置位</strong></td>
+<td><strong>溢出</strong></td>
+</tr>
+<tr>
+<td><strong>0111</strong></td>
+<td><strong>VC</strong></td>
+<td><strong>V****清零</strong></td>
+<td><strong>未溢出</strong></td>
+</tr>
+<tr>
+<td><strong>1000</strong></td>
+<td><strong>HI</strong></td>
+<td><strong>C<strong><strong>置位</strong></strong>Z****清零</strong></td>
+<td><strong>无符号数大于</strong></td>
+</tr>
+<tr>
+<td><strong>1001</strong></td>
+<td><strong>LS</strong></td>
+<td><strong>C<strong><strong>清零</strong></strong>Z****置位</strong></td>
+<td><strong>无符号数小于或等于</strong></td>
+</tr>
+<tr>
+<td><strong>1010</strong></td>
+<td><strong>GE</strong></td>
+<td><strong>N<strong><strong>等于</strong></strong>V</strong></td>
+<td><strong>带符号数大于或等于</strong></td>
+</tr>
+<tr>
+<td><strong>1011</strong></td>
+<td><strong>LT</strong></td>
+<td><strong>N<strong><strong>不等于</strong></strong>V</strong></td>
+<td><strong>带符号数小于</strong></td>
+</tr>
+<tr>
+<td><strong>1100</strong></td>
+<td><strong>GT</strong></td>
+<td><strong>Z<strong><strong>清零且（</strong></strong>N<strong><strong>等于</strong></strong>V****）</strong></td>
+<td><strong>带符号数大于</strong></td>
+</tr>
+<tr>
+<td><strong>1101</strong></td>
+<td><strong>LE</strong></td>
+<td><strong>Z<strong><strong>置位或（</strong></strong>N<strong><strong>不等于</strong></strong>V****）</strong></td>
+<td><strong>带符号数小于或等于</strong></td>
+</tr>
+<tr>
+<td><strong>1110</strong></td>
+<td><strong>AL</strong></td>
+<td><strong>忽略</strong></td>
+<td><strong>无条件执行</strong></td>
+</tr>
+</tbody></table>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>异常处理流程：系统执行完当前指令,将跳到相应的异常服务程序处执行,当异常服务程序执行完后,处理器返回到发生中断的指令的下一条指令处执行。</p>
+<p>进入异常：在适当的LR中保存下一条指令的地址，当异常入口来自：</p>
+<ol>
+<li>ARM状态，那么ARM7TDMI将当前指令地址加4或加8复制（取决于异常的类型）到LR中；</li>
+<li>为Thumb状态，那么ARM7TDMI将当前指令地址加4或加8 （取决于异常的类型）复制到LR中；异常处理器程序不必确定状态。</li>
+</ol>
+<p>将CPSR复制到适当的SPSR中；</p>
+<p>将CPSR模式位强制设置为与异常类型相对应的值；</p>
+<p>强制PC从相关的异常向量处取。</p>
+<p>ARM内核在中断异常时置位中断禁止标志，这样可以防止不受控制的异常嵌套。<br>注：异常总是在ARM状态中进行处理。当处理器处于Thumb状态时发生了异常，在异常向量地址装入PC时，会自动切换到ARM状态。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>) 说出ARM可以工作的模式名字。</span><br><span class="line">    用户、系统、快中断、中断、管理、终止、未定义、监管</span><br><span class="line"><span class="number">2</span>) ARM核有多少个寄存器？</span><br><span class="line">    <span class="number">40</span></span><br><span class="line"><span class="number">3</span>) 什么寄存器用于存储PC和连接寄存器？</span><br><span class="line">    R15 R14</span><br><span class="line"><span class="number">4</span>) R13通常用来存储什么？</span><br><span class="line">    堆栈指针</span><br><span class="line"><span class="number">5</span>) 在复位后，ARM处理器处于何种模式、何种状态？</span><br><span class="line">    用户模式和系统模式</span><br><span class="line"><span class="number">6</span>) 在Thumb 指令集中，哪些寄存器处于Low group?</span><br><span class="line">    R0-R7</span><br><span class="line"><span class="number">7</span>) CPSR的哪一位反映了处理器的状态？</span><br><span class="line">    </span><br><span class="line"><span class="number">8</span>) 所有的Thumb指令采取什么对齐方式?</span><br><span class="line">    半字对齐</span><br><span class="line"><span class="number">9</span>) ARM有哪几个异常类型。</span><br><span class="line">    快中断、中断、管理、终止、未定义、监管</span><br><span class="line"><span class="number">10</span>) 为什么FIQ的服务程序地址要位于<span class="number">0X1C</span>？</span><br><span class="line">    FIQ（Fast Interrupt Request）是一种处理器中的中断请求，用于响应具有更高优先级的中断。在ARM体系结构中，为了支持FIQ中断的快速响应，FIQ服务程序地址被规定为<span class="number">0x1C</span>。FIQ服务程序地址位于<span class="number">0x1C</span>的原因有以下几点：</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 对齐要求：由于ARM指令集中的Thumb指令需要按照半字对齐方式存储和执行，因此，为了保证FIQ服务程序的指令对齐，地址需要是<span class="number">16</span>位的偶数。<span class="number">0x1C</span>是一个满足对齐要求的地址。</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 快速响应：FIQ中断具有更高的优先级，允许处理器快速响应。通过将FIQ服务程序的地址固定在<span class="number">0x1C</span>，可以简化中断响应的逻辑和处理，从而提高中断的处理速度。</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 系统规定：ARM体系结构中对FIQ服务程序地址位于<span class="number">0x1C</span>的具体要求是由ARM公司制定的，这样可以确保软件和硬件在设计和实现上的一致性。</span><br><span class="line"></span><br><span class="line">总而言之，将FIQ服务程序地址固定在<span class="number">0x1C</span>是为了满足对齐要求、支持快速中断响应，并符合ARM体系结构的规定。</span><br><span class="line"></span><br><span class="line"><span class="number">11</span>) 在复位后，ARM处理器处于何种模式、何种状态？</span><br><span class="line">    监管模式 ARM状态</span><br></pre></td></tr></table></figure>
+
+<h2 id="ARM微处理器的指令系统"><a href="#ARM微处理器的指令系统" class="headerlink" title="ARM微处理器的指令系统"></a>ARM微处理器的指令系统</h2><p>ARM寻址方式：寻址方式是根据指令中给出的地址码字段来实现寻找真实操作数地址的方式。ARM处理器具有9种基本寻址方式。<br>(1).寄存器寻址；(2).立即寻址；(3).寄存器偏移寻址；(4).寄存器间接寻址；(5).基址寻址；(6).多寄存器寻址；(7).堆栈寻址；(8).块拷贝寻址；(9).相对寻址。</p>
+<h3 id="堆栈寻址"><a href="#堆栈寻址" class="headerlink" title="堆栈寻址"></a>堆栈寻址</h3><p>堆栈寻址：堆栈指针指向最后压入的堆栈的有效数据项，称为满堆栈；堆栈指针指向下一个待压入数据的空位置，称为空堆栈。堆栈指针指向最后压入的堆栈的有效数据项，称为满堆栈；堆栈指针指向下一个待压入数据的空位置，称为空堆栈。</p>
 
       
 
