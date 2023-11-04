@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
                    <nav>
-                               总文章数 10
+                               总文章数 12
                    </nav>
 
 		<nav class="header-smart-menu">
@@ -88,7 +88,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">31.5k</span>
+    总字数 <span class="post-count">33.2k</span>
 </nav>
 
     </div>
@@ -154,6 +154,310 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-嵌入式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/11/02/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+    </h1>
+  
+
+        
+        <a href="/2023/11/02/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2023-11-02T14:52:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-02</time>
+</a>
+        
+      </header>
+<div align="center" class="post-count">
+    字数：1.7k字 | 预计阅读时长：5分钟
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="嵌入式系统概述"><a href="#嵌入式系统概述" class="headerlink" title="嵌入式系统概述"></a>嵌入式系统概述</h1><h2 id="嵌入式系统组成"><a href="#嵌入式系统组成" class="headerlink" title="嵌入式系统组成"></a>嵌入式系统组成</h2><p>IEEE：嵌入式系统是以应用为中心，计算机技术为基础、软硬件可裁剪、适应应用系统对功能、可靠性、成本、体积、功耗严格要求的专用计算机系统。</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>通用计算机</th>
+<th>嵌入式系统</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>形式和类型</strong></td>
+<td>•看得见的计算机。  •按其体系结构、运算速度  和结构规模等因素分为大  、中、小型机和微机。</td>
+<td>•看不见的计算机。  •形式多样，应用领域广  泛，按应用来分。</td>
+</tr>
+<tr>
+<td><strong>组成</strong></td>
+<td>•通用处理器、标准总线和  外设。  •软件和硬件相对独立。</td>
+<td>•面向应用的嵌入式微处理器，总线和外部接口多集成在处理器内部。  •软件与硬件是紧密集成在一起的。</td>
+</tr>
+<tr>
+<td><strong>开发方式</strong></td>
+<td>•开发平台和运行平台都是  通用计算机</td>
+<td>•采用交叉开发方式，开发平台一般是通用计算机，运行平台是嵌入式 系统。</td>
+</tr>
+<tr>
+<td><strong>二次开发性</strong></td>
+<td>•应用程序可重新编制</td>
+<td>•一般不能再编程</td>
+</tr>
+</tbody></table>
+<p>一般由<em><strong>嵌入式硬件</strong></em>和<em><strong>软件</strong></em>组成。</p>
+<p>硬件：以包含微处理器的SoC为核心继承存储器和系统专用的IO设备</p>
+<p>软件：<em><strong>初始化代码及驱动、嵌入式操作系统和应用程序等</strong></em>，这些软件有机的结合在一起，形成系统特定的一体化软件。</p>
+<h2 id="嵌入式发展历程"><a href="#嵌入式发展历程" class="headerlink" title="嵌入式发展历程"></a>嵌入式发展历程</h2><ol>
+<li>出现和兴起1960-1970</li>
+<li>走向繁荣，软件和硬件日臻完善1971-1989</li>
+<li>走向纵深1990-现在</li>
+</ol>
+<h2 id="嵌入式系统的特点（理解-掌握）"><a href="#嵌入式系统的特点（理解-掌握）" class="headerlink" title="嵌入式系统的特点（理解+掌握）"></a>嵌入式系统的特点（理解+掌握）</h2><ol>
+<li><strong>嵌入式系统通常是形式多 样，面向特定应用的</strong></li>
+<li><strong>嵌入式系统得到多种类型的处 理器和处理器体系结构的支持</strong></li>
+<li><strong>嵌入式系统通常极其关注成本</strong></li>
+<li><strong>实时性和可靠性要求</strong></li>
+<li><strong>嵌入式系统使用的操作系统一般是适应多种处理器、可剪裁、轻量型、实时可靠、可固化的 嵌入式操作系统</strong></li>
+<li><strong>开发需要专门的工具和特殊的方法</strong></li>
+</ol>
+<h2 id="嵌入式系统分类"><a href="#嵌入式系统分类" class="headerlink" title="嵌入式系统分类"></a>嵌入式系统分类</h2><ol>
+<li>按处理器位数划分：4、8、64位嵌入式系统</li>
+<li>按应用划分：通信类，信息家电类、移动终端类、汽车电子类、工业控制类。</li>
+<li>按实时性划分：硬实时、软实时、非实时</li>
+<li>按软件结构划分：循环轮询系统、有限状态机系统、前后台、单处理器多任务、多处理器多任务</li>
+</ol>
+<h1 id="嵌入式硬件系统"><a href="#嵌入式硬件系统" class="headerlink" title="嵌入式硬件系统"></a>嵌入式硬件系统</h1><h2 id="基本组成"><a href="#基本组成" class="headerlink" title="基本组成"></a>基本组成</h2><p>嵌入式系统的硬件是以<em><strong>包含嵌入式微处理器的SoC 为核心，主要由SoC、总线、存储器、输入&#x2F;输出接口和设备组成</strong></em>。</p>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>冯诺伊曼结构：数据和指令存放在同一存储器中，统一编址，指令和数据通过同一总线访问。</p>
+<p>哈佛结构：并行体系结构，<em><strong>程序和数据存储在不同的存储空间</strong></em>，每个存储器独立编址，独立访问，设置两条总线（程序总线和数据总线）——&gt;数据吞吐量提高了一倍。</p>
+<h2 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h2><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>CISC</strong>  复杂指令集系统</th>
+<th><strong>RISC</strong>  精简指令集系统</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>价格</td>
+<td>由硬件完成部分软件功能，硬件复杂性增加，芯片成本高</td>
+<td>由软件完成部分硬件功能，软件复杂性增加，芯片成本低</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>减少代码尺寸，增加指令的执行周期数</td>
+<td>使用流水线降低指令的执行周期数，  增加代码尺寸</td>
+</tr>
+<tr>
+<td>指令集</td>
+<td>大量的混杂型指令集，有简单快速的指令，也有复杂的多周  期指令，符合HLL（high level   language）</td>
+<td>简单的单周期指令，在汇编指令方面有相应的CISC微代码指令</td>
+</tr>
+<tr>
+<td>高级语言支持</td>
+<td>硬件完成</td>
+<td>软件完成</td>
+</tr>
+<tr>
+<td>寻址模式</td>
+<td>复杂的寻址模式，支持内存到  内存寻址</td>
+<td>简单的寻址模式，仅允许LOAD和  STORE指令存取内存，其它所有的  操作都基于寄存器到寄存器</td>
+</tr>
+<tr>
+<td>控制单元</td>
+<td>微码</td>
+<td>直接执行</td>
+</tr>
+<tr>
+<td>寄存器数目</td>
+<td>寄存器较少</td>
+<td>寄存器较多</td>
+</tr>
+</tbody></table>
+<h2 id="主流嵌入式微处理器"><a href="#主流嵌入式微处理器" class="headerlink" title="主流嵌入式微处理器"></a>主流嵌入式微处理器</h2><p>主流嵌入式微处理器由：ARM、MIPS、PowerPC、Super H</p>
+<p>ARM处理器：从Cortex（ARMv7）开始有<em><strong>三代</strong></em>处理器：A（应用处理器）、R（实时控制处理器）、M（微控制器）</p>
+<h2 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h2><h3 id="AMBA总线"><a href="#AMBA总线" class="headerlink" title="AMBA总线"></a>AMBA总线</h3><ol>
+<li><p>AMBA主机接口（AHB）：作为总线的核心组件，AHB提供了高性能的总线传输，支持多个主从设备的连接。它使用多层的信号控制和优先级控制来协调设备之间的数据传输。构成：<em><strong>主单元、从单元、仲裁器、译码器</strong></em>。</p>
+</li>
+<li><p>ASB（Advanced System Bus）：也用于高性能系统模块的连接，现多由 AHB总线替代。</p>
+</li>
+<li><p>AMBA流水线接口（APB）：APB是一种低功耗、低带宽的总线接口，用于连接低速外设。它支持简单的控制和配置寄存器的读写操作。由两部分构成：<em><strong>APB桥（唯一的主单元）和APB从单元</strong></em></p>
+</li>
+<li><p>AMBA高速接口（AXI）：AXI是一种高性能、低延迟的总线接口，适用于连接高带宽的设备或者高速存储器。它提供了高度灵活的数据传输和地址映射机制，支持多个主设备和从设备的并行操作。</p>
+</li>
+</ol>
+<p><img src="/.com//.%5C%E5%B5%8C%E5%85%A5%E5%BC%8F%5Cimage-20231104115610043.png" alt="image-20231104115610043"></p>
+<h3 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h3><p><strong>UART是一种通用异步串行收发器，可以实现全双工传输。</strong></p>
+<h3 id="I2C"><a href="#I2C" class="headerlink" title="I2C"></a>I2C</h3><p><em><strong>是一个同步串行收发器</strong></em></p>
+<p>I2C总线是由数据线SDA和时钟线SCL构成的同步串行总线，支持双向传送。总线上并接的每一模块电路既是主控器（或被控器），又是发送器（或接收器）。</p>
+<p>I2C通信过程：</p>
+<ol>
+<li><p>起始条件（Start Condition）：主设备发送一个起始条件来开始I2C通信。起始条件是将SCL（时钟线）从高电平拉低，接着拉低SDA（数据线）。</p>
+</li>
+<li><p>地址和读写位传输：主设备将目标设备的地址和读写位传输到总线上，指定要与哪个设备进行通信（读或写）。地址由7位或10位组成，用于唯一标识每个设备。</p>
+</li>
+<li><p>寻址确认：接收到其地址的设备向主设备发送确认（ACK）信号，表示设备已被成功寻址。</p>
+</li>
+<li><p>数据传输：主设备和目标设备之间进行数据传输。每次数据传输可以是一个字节或多个字节，取决于应用需求。</p>
+</li>
+<li><p>确认传输：接收方在接收到每个字节后会发送一个确认信号（ACK）给发送方，表示数据已正确接收。</p>
+</li>
+<li><p>停止条件（Stop Condition）：主设备发送停止条件来结束I2C通信。停止条件是将SCL从低电平拉高，接着拉高SDA。</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">期末复习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/嵌入式//" class="article-tag-list-link color4">嵌入式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/11/02/%E5%B5%8C%E5%85%A5%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-面向对象分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90/">面向对象分析</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2023-09-12T01:55:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-12</time>
+</a>
+        
+      </header>
+<div align="center" class="post-count">
+    字数：0字 | 预计阅读时长：1分钟
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-小学期代码详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -859,184 +1163,10 @@
 
 
   
-    <article id="post-Markdown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/01/19/Markdown/">Markdown常见用法</a>
-    </h1>
-  
-
-        
-        <a href="/2023/01/19/Markdown/" class="archive-article-date">
-  	<time datetime="2023-01-19T14:40:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-19</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-    字数：449字 | 预计阅读时长：1分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文主要总结了常用的Markdown语法，详细参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014061630/article/details/81359144?ops_request_misc=%7B%22request_id%22:%22167413836316782428611465%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=167413836316782428611465&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-3-81359144-null-null.142%5Ev71%5Ewechat,201%5Ev4%5Eadd_ask&utm_term=markdown&spm=1018.2226.3001.4187">(236条消息) Markdown语法图文全面详解(10分钟学会)_黑暗星球的博客-CSDN博客_markdown语法</a>，本文内容仅供参考。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Markdown//" class="article-tag-list-link color4">Markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/01/19/Markdown/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-helloworld" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/01/17/helloworld/">Nagisa的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2023/01/17/helloworld/" class="archive-article-date">
-  	<time datetime="2023-01-17T05:47:08.974Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-17</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-    字数：219字 | 预计阅读时长：1分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Nagisa的第一篇博客"><a href="#Nagisa的第一篇博客" class="headerlink" title="Nagisa的第一篇博客"></a>Nagisa的第一篇博客</h1><p>2023&#x2F;1&#x2F;17</p>
-<hr>
-<p>经过本人艰苦卓绝的努力（不是），花费了高额的金钱（也就买了个域名），终于搭建了一个属于小郭的blog。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/小郭碎碎念（-）//" class="article-tag-list-link color4">小郭碎碎念（ ）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/01/17/helloworld/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1139,6 +1269,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">期末复习</a>
               </li>
             
             <div class="clearfix"></div>
