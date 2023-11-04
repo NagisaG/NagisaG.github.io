@@ -88,7 +88,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">35.7k</span>
+    总字数 <span class="post-count">38.3k</span>
 </nav>
 
     </div>
@@ -173,293 +173,13 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：4.3k字 | 预计阅读时长：15分钟
+    字数：6.8k字 | 预计阅读时长：24分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="嵌入式系统概述"><a href="#嵌入式系统概述" class="headerlink" title="嵌入式系统概述"></a>嵌入式系统概述</h1><h2 id="嵌入式系统组成"><a href="#嵌入式系统组成" class="headerlink" title="嵌入式系统组成"></a>嵌入式系统组成</h2><p>IEEE：嵌入式系统是以应用为中心，计算机技术为基础、软硬件可裁剪、适应应用系统对功能、可靠性、成本、体积、功耗严格要求的专用计算机系统。</p>
-<table>
-<thead>
-<tr>
-<th>特征</th>
-<th>通用计算机</th>
-<th>嵌入式系统</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>形式和类型</strong></td>
-<td>•看得见的计算机。  •按其体系结构、运算速度  和结构规模等因素分为大  、中、小型机和微机。</td>
-<td>•看不见的计算机。  •形式多样，应用领域广  泛，按应用来分。</td>
-</tr>
-<tr>
-<td><strong>组成</strong></td>
-<td>•通用处理器、标准总线和  外设。  •软件和硬件相对独立。</td>
-<td>•面向应用的嵌入式微处理器，总线和外部接口多集成在处理器内部。  •软件与硬件是紧密集成在一起的。</td>
-</tr>
-<tr>
-<td><strong>开发方式</strong></td>
-<td>•开发平台和运行平台都是  通用计算机</td>
-<td>•采用交叉开发方式，开发平台一般是通用计算机，运行平台是嵌入式 系统。</td>
-</tr>
-<tr>
-<td><strong>二次开发性</strong></td>
-<td>•应用程序可重新编制</td>
-<td>•一般不能再编程</td>
-</tr>
-</tbody></table>
-<p>一般由<em><strong>嵌入式硬件</strong></em>和<em><strong>软件</strong></em>组成。</p>
-<p>硬件：以包含微处理器的SoC为核心继承存储器和系统专用的IO设备</p>
-<p>软件：<em><strong>初始化代码及驱动、嵌入式操作系统和应用程序等</strong></em>，这些软件有机的结合在一起，形成系统特定的一体化软件。</p>
-<h2 id="嵌入式发展历程"><a href="#嵌入式发展历程" class="headerlink" title="嵌入式发展历程"></a>嵌入式发展历程</h2><ol>
-<li>出现和兴起1960-1970</li>
-<li>走向繁荣，软件和硬件日臻完善1971-1989</li>
-<li>走向纵深1990-现在</li>
-</ol>
-<h2 id="嵌入式系统的特点（理解-掌握）"><a href="#嵌入式系统的特点（理解-掌握）" class="headerlink" title="嵌入式系统的特点（理解+掌握）"></a>嵌入式系统的特点（理解+掌握）</h2><ol>
-<li><strong>嵌入式系统通常是形式多 样，面向特定应用的</strong></li>
-<li><strong>嵌入式系统得到多种类型的处 理器和处理器体系结构的支持</strong></li>
-<li><strong>嵌入式系统通常极其关注成本</strong></li>
-<li><strong>实时性和可靠性要求</strong></li>
-<li><strong>嵌入式系统使用的操作系统一般是适应多种处理器、可剪裁、轻量型、实时可靠、可固化的 嵌入式操作系统</strong></li>
-<li><strong>开发需要专门的工具和特殊的方法</strong></li>
-</ol>
-<h2 id="嵌入式系统分类"><a href="#嵌入式系统分类" class="headerlink" title="嵌入式系统分类"></a>嵌入式系统分类</h2><ol>
-<li>按处理器位数划分：4、8、64位嵌入式系统</li>
-<li>按应用划分：通信类，信息家电类、移动终端类、汽车电子类、工业控制类。</li>
-<li>按实时性划分：硬实时、软实时、非实时</li>
-<li>按软件结构划分：循环轮询系统、有限状态机系统、前后台、单处理器多任务、多处理器多任务</li>
-</ol>
-<h1 id="嵌入式硬件系统"><a href="#嵌入式硬件系统" class="headerlink" title="嵌入式硬件系统"></a>嵌入式硬件系统</h1><h2 id="基本组成"><a href="#基本组成" class="headerlink" title="基本组成"></a>基本组成</h2><p>嵌入式系统的硬件是以<em><strong>包含嵌入式微处理器的SoC 为核心，主要由SoC、总线、存储器、输入&#x2F;输出接口和设备组成</strong></em>。</p>
-<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>冯诺伊曼结构：数据和指令存放在同一存储器中，统一编址，指令和数据通过同一总线访问。</p>
-<p>哈佛结构：并行体系结构，<em><strong>程序和数据存储在不同的存储空间</strong></em>，每个存储器独立编址，独立访问，设置两条总线（程序总线和数据总线）——&gt;数据吞吐量提高了一倍。</p>
-<h2 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h2><table>
-<thead>
-<tr>
-<th></th>
-<th><strong>CISC</strong>  复杂指令集系统</th>
-<th><strong>RISC</strong>  精简指令集系统</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>价格</td>
-<td>由硬件完成部分软件功能，硬件复杂性增加，芯片成本高</td>
-<td>由软件完成部分硬件功能，软件复杂性增加，芯片成本低</td>
-</tr>
-<tr>
-<td>性能</td>
-<td>减少代码尺寸，增加指令的执行周期数</td>
-<td>使用流水线降低指令的执行周期数，  增加代码尺寸</td>
-</tr>
-<tr>
-<td>指令集</td>
-<td>大量的混杂型指令集，有简单快速的指令，也有复杂的多周  期指令，符合HLL（high level   language）</td>
-<td>简单的单周期指令，在汇编指令方面有相应的CISC微代码指令</td>
-</tr>
-<tr>
-<td>高级语言支持</td>
-<td>硬件完成</td>
-<td>软件完成</td>
-</tr>
-<tr>
-<td>寻址模式</td>
-<td>复杂的寻址模式，支持内存到  内存寻址</td>
-<td>简单的寻址模式，仅允许LOAD和  STORE指令存取内存，其它所有的  操作都基于寄存器到寄存器</td>
-</tr>
-<tr>
-<td>控制单元</td>
-<td>微码</td>
-<td>直接执行</td>
-</tr>
-<tr>
-<td>寄存器数目</td>
-<td>寄存器较少</td>
-<td>寄存器较多</td>
-</tr>
-</tbody></table>
-<h2 id="主流嵌入式微处理器"><a href="#主流嵌入式微处理器" class="headerlink" title="主流嵌入式微处理器"></a>主流嵌入式微处理器</h2><p>主流嵌入式微处理器由：ARM、MIPS、PowerPC、Super H</p>
-<p>ARM处理器：从Cortex（ARMv7）开始有<em><strong>三代</strong></em>处理器：A（应用处理器）、R（实时控制处理器）、M（微控制器）</p>
-<h2 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h2><h3 id="AMBA总线"><a href="#AMBA总线" class="headerlink" title="AMBA总线"></a>AMBA总线</h3><ol>
-<li><p>AMBA主机接口（AHB）：作为总线的核心组件，AHB提供了高性能的总线传输，支持多个主从设备的连接。它使用多层的信号控制和优先级控制来协调设备之间的数据传输。构成：<em><strong>主单元、从单元、仲裁器、译码器</strong></em>。</p>
-</li>
-<li><p>ASB（Advanced System Bus）：也用于高性能系统模块的连接，现多由 AHB总线替代。</p>
-</li>
-<li><p>AMBA流水线接口（APB）：APB是一种低功耗、低带宽的总线接口，用于连接低速外设。它支持简单的控制和配置寄存器的读写操作。由两部分构成：<em><strong>APB桥（唯一的主单元）和APB从单元</strong></em></p>
-</li>
-<li><p>AMBA高速接口（AXI）：AXI是一种高性能、低延迟的总线接口，适用于连接高带宽的设备或者高速存储器。它提供了高度灵活的数据传输和地址映射机制，支持多个主设备和从设备的并行操作。</p>
-</li>
-</ol>
-<p><img src="/.com//.%5C%E5%B5%8C%E5%85%A5%E5%BC%8F%5Cimage-20231104115610043.png" alt="image-20231104115610043"></p>
-<h3 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h3><p><strong>UART是一种通用异步串行收发器，可以实现全双工传输。</strong></p>
-<h3 id="I2C"><a href="#I2C" class="headerlink" title="I2C"></a>I2C</h3><p><em><strong>是一个同步串行收发器</strong></em></p>
-<p>I2C总线是由数据线SDA和时钟线SCL构成的同步串行总线，支持双向传送。总线上并接的每一模块电路既是主控器（或被控器），又是发送器（或接收器）。</p>
-<p>I2C通信过程：</p>
-<ol>
-<li><p>起始条件（Start Condition）：主设备发送一个起始条件来开始I2C通信。起始条件是将SCL（时钟线）从高电平拉低，接着拉低SDA（数据线）。</p>
-</li>
-<li><p>地址和读写位传输：主设备将目标设备的地址和读写位传输到总线上，指定要与哪个设备进行通信（读或写）。地址由7位或10位组成，用于唯一标识每个设备。</p>
-</li>
-<li><p>寻址确认：接收到其地址的设备向主设备发送确认（ACK）信号，表示设备已被成功寻址。</p>
-</li>
-<li><p>数据传输：主设备和目标设备之间进行数据传输。每次数据传输可以是一个字节或多个字节，取决于应用需求。</p>
-</li>
-<li><p>确认传输：接收方在接收到每个字节后会发送一个确认信号（ACK）给发送方，表示数据已正确接收。</p>
-</li>
-<li><p>停止条件（Stop Condition）：主设备发送停止条件来结束I2C通信。停止条件是将SCL从低电平拉高，接着拉高SDA。</p>
-</li>
-</ol>
-<h2 id="嵌入式软件的独特性"><a href="#嵌入式软件的独特性" class="headerlink" title="嵌入式软件的独特性"></a>嵌入式软件的独特性</h2><p>1)规模小，但开发难度不一定小；</p>
-<p>2)快速启动，直接运行；</p>
-<p>3)实时性和可靠性要求高；</p>
-<p>4)应用程序和操作系统一体化；</p>
-<p>5)开发平台和运行平台不同。</p>
-<h1 id="ARM处理器体系结构"><a href="#ARM处理器体系结构" class="headerlink" title="ARM处理器体系结构"></a>ARM处理器体系结构</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>字节（Byte）：在ARM体系结构和8位&#x2F;16位处理器体系结构中，字节的长度均为8位。</p>
-<p>字（Word）：在ARM体系结构中，字的长度为32位，而在8位&#x2F;16位处理器体系结构中，字的长度一般为16位。 （注：字必须与4字节的边界对准。）</p>
-<p>半字：在ARM体系结构中，半字的长度为16位，与8位&#x2F;16位处理器体系结构中字的长度一致。（注：半字必须与2字节的边界对准。）</p>
-<h2 id="寻址空间"><a href="#寻址空间" class="headerlink" title="寻址空间"></a>寻址空间</h2><p>ARM是RISC体系，32位读取存储框架</p>
-<p>线性存储地址，空间大小位4G</p>
-<h2 id="工作状态"><a href="#工作状态" class="headerlink" title="工作状态"></a>工作状态</h2><p>ARM指令存储结构：32位</p>
-<p>THUMB指令存储结构：16位</p>
-<p><em><strong>ARM微处理器的工作状态由两种：ARM状态和Thumb状态</strong></em></p>
-<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p>当系统具有32位的数据总线宽度时,ARM比THUMB有更好的性能表现<br>当系统的数据总线宽度小于32位时,THUMB比ARM性能更好(比如16的存储器,1条ARM指令需要两个存储器访问周期)<br>代码尺寸<br>同样一段C代码,用THUMB指令编译的结果,其长度只占ARM编译结果的65%左右</p>
-<p>THUMB指令集在功能上只是ARM指令集的一个子集，某些功能只能在ARM状态下执行,如CPSR和协处理器的访问。进行异常响应时,处理器会自动进入ARM状态。即使是一个单纯的THUMB应用系统,必须加一个汇编的交互头程序,因为系统总是自动从ARM开始启动。</p>
-<h3 id="处理器状态切换"><a href="#处理器状态切换" class="headerlink" title="处理器状态切换"></a>处理器状态切换</h3><p>进入Thumb状态：当操作数寄存器的状态位(位[0])为1时，执行BX指令进入Thumb状态。如果处理器在Thumb状态进入异常，则当异常处理返回时，自动转换到Thumb状态。</p>
-<p>进入ARM状态：当操作数寄存器的状态位(位[0])为0时执行BX指令进入ARM状态。当处理器进行异常处理时，进入ARM状态从异常向量地址处开始执行。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">;从Arm状态切换到Thumb状态</span><br><span class="line">    LDR    R0,=Lable+<span class="number">1</span></span><br><span class="line">    BX     R0</span><br><span class="line">;从Thumb状态切换到ARM状态</span><br><span class="line">    LDR    R0,=Lable</span><br><span class="line">    BX     R0</span><br></pre></td></tr></table></figure>
-
-<h3 id="存储格式"><a href="#存储格式" class="headerlink" title="存储格式"></a>存储格式</h3><p><em><strong>大端格式：字数据的高字节存储在低地址中，而字数据的低字节则存放在高地址中。</strong></em></p>
-<p>***小端格式：低地址中存放的是字数据的低字节，高地址存放的是字数据的高字节。 ***</p>
-<h3 id="处理器模式"><a href="#处理器模式" class="headerlink" title="处理器模式"></a>处理器模式</h3><p>八种处理器模式，除了用户模式都是特权模式，除了用户模式和系统模式都是异常模式。</p>
-<p><em><strong>特权模式：除用户模式外，其它模式均为特权模式。ARM内部寄存器和一些片内外设在硬件设计上只允许（或者可选为只允许）特权模式下访问。此外，特权模式可以自由的切换处理器模式，而用户模式不能直接切换到别的模式。</strong></em></p>
-<p><em><strong>异常模式：这六种模式称为异常模式。它们除了可以通过程序切换进入外，也可以由特定的异常进入。当特定的异常出现时，处理器进入相应的模式。每种异常模式都有一些独立的寄存器，以避免异常退出时用户模式的状态不可靠。</strong></em></p>
-<p>用户和系统模式：两种模式都不能由异常进入，而且它们使用完全相同的寄存器组。系统模式是特权模式，不受用户模式的限制。操作系统在该模式下访问用户模式的寄存器就比较方便，而且操作系统的一些特权任务可以使用这个模式访问一些受控的资源。</p>
-<p>模式切换：通过修改CPSR（Current Program Status Register）寄存器的特定位，可以实现处理器模式的切换。CPSR寄存器存储了处理器的状态信息，包括当前的处理器模式。</p>
-<p><em><strong>切换处理器模式的步骤如下：</strong></em></p>
-<ol>
-<li><p><em><strong>将当前的CPSR寄存器的值读取到一个普通寄存器中，以保存当前的处理器模式。</strong></em></p>
-</li>
-<li><p><em><strong>修改普通寄存器中的对应位，以设置新的处理器模式。</strong></em></p>
-</li>
-<li><p><em><strong>将修改后的普通寄存器的值移动到CPSR寄存器中，从而切换到新的处理器模式。</strong></em></p>
-</li>
-</ol>
-<h3 id="寄存器组织"><a href="#寄存器组织" class="headerlink" title="寄存器组织"></a>寄存器组织</h3><p>有40个物理寄存器，有18个可编程访问的寄存器。</p>
-<p>R14寄存器与子程序调用：程序A执行过程中调用程序B；程序跳转至标号Lable，执行程序B。同时硬件将“BL Lable”指令的下一条指令所在地址存入R14；程序B执行最后，将R14寄存器的内容放入PC，返回程序A；</p>
-<table>
-<thead>
-<tr>
-<th><strong>条件码</strong></th>
-<th><strong>助记符后缀</strong></th>
-<th><strong>标 志</strong></th>
-<th><strong>含 义</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>0000</strong></td>
-<td><strong>EQ</strong></td>
-<td><strong>Z****置位</strong></td>
-<td><strong>相等</strong></td>
-</tr>
-<tr>
-<td><strong>0001</strong></td>
-<td><strong>NE</strong></td>
-<td><strong>Z****清零</strong></td>
-<td><strong>不相等</strong></td>
-</tr>
-<tr>
-<td><strong>0010</strong></td>
-<td><strong>CS&#x2F;HS</strong></td>
-<td><strong>C****置位</strong></td>
-<td><strong>无符号数大于或等于</strong></td>
-</tr>
-<tr>
-<td><strong>0011</strong></td>
-<td><strong>CC&#x2F;LO</strong></td>
-<td><strong>C****清零</strong></td>
-<td><strong>无符号数小于</strong></td>
-</tr>
-<tr>
-<td><strong>0100</strong></td>
-<td><strong>MI</strong></td>
-<td><strong>N****置位</strong></td>
-<td><strong>负数</strong></td>
-</tr>
-<tr>
-<td><strong>0101</strong></td>
-<td><strong>PL</strong></td>
-<td><strong>N****清零</strong></td>
-<td><strong>正数或零</strong></td>
-</tr>
-<tr>
-<td><strong>0110</strong></td>
-<td><strong>VS</strong></td>
-<td><strong>V****置位</strong></td>
-<td><strong>溢出</strong></td>
-</tr>
-<tr>
-<td><strong>0111</strong></td>
-<td><strong>VC</strong></td>
-<td><strong>V****清零</strong></td>
-<td><strong>未溢出</strong></td>
-</tr>
-<tr>
-<td><strong>1000</strong></td>
-<td><strong>HI</strong></td>
-<td><strong>C<strong><strong>置位</strong></strong>Z****清零</strong></td>
-<td><strong>无符号数大于</strong></td>
-</tr>
-<tr>
-<td><strong>1001</strong></td>
-<td><strong>LS</strong></td>
-<td><strong>C<strong><strong>清零</strong></strong>Z****置位</strong></td>
-<td><strong>无符号数小于或等于</strong></td>
-</tr>
-<tr>
-<td><strong>1010</strong></td>
-<td><strong>GE</strong></td>
-<td><strong>N<strong><strong>等于</strong></strong>V</strong></td>
-<td><strong>带符号数大于或等于</strong></td>
-</tr>
-<tr>
-<td><strong>1011</strong></td>
-<td><strong>LT</strong></td>
-<td><strong>N<strong><strong>不等于</strong></strong>V</strong></td>
-<td><strong>带符号数小于</strong></td>
-</tr>
-<tr>
-<td><strong>1100</strong></td>
-<td><strong>GT</strong></td>
-<td><strong>Z<strong><strong>清零且（</strong></strong>N<strong><strong>等于</strong></strong>V****）</strong></td>
-<td><strong>带符号数大于</strong></td>
-</tr>
-<tr>
-<td><strong>1101</strong></td>
-<td><strong>LE</strong></td>
-<td><strong>Z<strong><strong>置位或（</strong></strong>N<strong><strong>不等于</strong></strong>V****）</strong></td>
-<td><strong>带符号数小于或等于</strong></td>
-</tr>
-<tr>
-<td><strong>1110</strong></td>
-<td><strong>AL</strong></td>
-<td><strong>忽略</strong></td>
-<td><strong>无条件执行</strong></td>
-</tr>
-</tbody></table>
-<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>异常处理流程：系统执行完当前指令,将跳到相应的异常服务程序处执行,当异常服务程序执行完后,处理器返回到发生中断的指令的下一条指令处执行。</p>
-<p>进入异常：在适当的LR中保存下一条指令的地址，当异常入口来自：</p>
-<ol>
-<li>ARM状态，那么ARM7TDMI将当前指令地址加4或加8复制（取决于异常的类型）到LR中；</li>
-<li>为Thumb状态，那么ARM7TDMI将当前指令地址加4或加8 （取决于异常的类型）复制到LR中；异常处理器程序不必确定状态。</li>
-</ol>
-<p>将CPSR复制到适当的SPSR中；</p>
-<p>将CPSR模式位强制设置为与异常类型相对应的值；</p>
-<p>强制PC从相关的异常向量处取。</p>
-<p>ARM内核在中断异常时置位中断禁止标志，这样可以防止不受控制的异常嵌套。<br>注：异常总是在ARM状态中进行处理。当处理器处于Thumb状态时发生了异常，在异常向量地址装入PC时，会自动切换到ARM状态。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>) 说出ARM可以工作的模式名字。</span><br><span class="line">    用户、系统、快中断、中断、管理、终止、未定义、监管</span><br><span class="line"><span class="number">2</span>) ARM核有多少个寄存器？</span><br><span class="line">    <span class="number">40</span></span><br><span class="line"><span class="number">3</span>) 什么寄存器用于存储PC和连接寄存器？</span><br><span class="line">    R15 R14</span><br><span class="line"><span class="number">4</span>) R13通常用来存储什么？</span><br><span class="line">    堆栈指针</span><br><span class="line"><span class="number">5</span>) 在复位后，ARM处理器处于何种模式、何种状态？</span><br><span class="line">    用户模式和系统模式</span><br><span class="line"><span class="number">6</span>) 在Thumb 指令集中，哪些寄存器处于Low group?</span><br><span class="line">    R0-R7</span><br><span class="line"><span class="number">7</span>) CPSR的哪一位反映了处理器的状态？</span><br><span class="line">    </span><br><span class="line"><span class="number">8</span>) 所有的Thumb指令采取什么对齐方式?</span><br><span class="line">    半字对齐</span><br><span class="line"><span class="number">9</span>) ARM有哪几个异常类型。</span><br><span class="line">    快中断、中断、管理、终止、未定义、监管</span><br><span class="line"><span class="number">10</span>) 为什么FIQ的服务程序地址要位于<span class="number">0X1C</span>？</span><br><span class="line">    FIQ（Fast Interrupt Request）是一种处理器中的中断请求，用于响应具有更高优先级的中断。在ARM体系结构中，为了支持FIQ中断的快速响应，FIQ服务程序地址被规定为<span class="number">0x1C</span>。FIQ服务程序地址位于<span class="number">0x1C</span>的原因有以下几点：</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 对齐要求：由于ARM指令集中的Thumb指令需要按照半字对齐方式存储和执行，因此，为了保证FIQ服务程序的指令对齐，地址需要是<span class="number">16</span>位的偶数。<span class="number">0x1C</span>是一个满足对齐要求的地址。</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 快速响应：FIQ中断具有更高的优先级，允许处理器快速响应。通过将FIQ服务程序的地址固定在<span class="number">0x1C</span>，可以简化中断响应的逻辑和处理，从而提高中断的处理速度。</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 系统规定：ARM体系结构中对FIQ服务程序地址位于<span class="number">0x1C</span>的具体要求是由ARM公司制定的，这样可以确保软件和硬件在设计和实现上的一致性。</span><br><span class="line"></span><br><span class="line">总而言之，将FIQ服务程序地址固定在<span class="number">0x1C</span>是为了满足对齐要求、支持快速中断响应，并符合ARM体系结构的规定。</span><br><span class="line"></span><br><span class="line"><span class="number">11</span>) 在复位后，ARM处理器处于何种模式、何种状态？</span><br><span class="line">    监管模式 ARM状态</span><br></pre></td></tr></table></figure>
-
-<h2 id="ARM微处理器的指令系统"><a href="#ARM微处理器的指令系统" class="headerlink" title="ARM微处理器的指令系统"></a>ARM微处理器的指令系统</h2><p>ARM寻址方式：寻址方式是根据指令中给出的地址码字段来实现寻找真实操作数地址的方式。ARM处理器具有9种基本寻址方式。<br>(1).寄存器寻址；(2).立即寻址；(3).寄存器偏移寻址；(4).寄存器间接寻址；(5).基址寻址；(6).多寄存器寻址；(7).堆栈寻址；(8).块拷贝寻址；(9).相对寻址。</p>
-<h3 id="堆栈寻址"><a href="#堆栈寻址" class="headerlink" title="堆栈寻址"></a>堆栈寻址</h3><p>堆栈寻址：堆栈指针指向最后压入的堆栈的有效数据项，称为满堆栈；堆栈指针指向下一个待压入数据的空位置，称为空堆栈。堆栈指针指向最后压入的堆栈的有效数据项，称为满堆栈；堆栈指针指向下一个待压入数据的空位置，称为空堆栈。</p>
-
+        
       
 
       
@@ -472,7 +192,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">期末复习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">嵌入式</a>
         		</li>
       		
 		</ul>
@@ -484,7 +204,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/嵌入式//" class="article-tag-list-link color4">嵌入式</a>
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -1423,7 +1143,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">期末复习</a>
+                <a href="javascript:void(0)" class="js-tag color4">嵌入式</a>
               </li>
             
             <div class="clearfix"></div>
