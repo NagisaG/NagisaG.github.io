@@ -8,16 +8,23 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>面向对象分析 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="面向对象分析与设计课程介绍软件系统开发的两个重要阶段：分析、设计 分析：发现正确的问题 设计：发现正确的解决方案 分析+设计&#x3D;建模（modeling） 建模的结果就是模型。 软件开发有两种思维方式：面向过程和面向对象 面向过程（结构化方法）   - 典型如C语言、Pascal，侧重于如何分解和编写方法。    - 对问题领域的映射是间接的。    - 系统需要完成的功能，分配到各个函数。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="面向对象分析">
 <meta property="og:url" content="http://example.com/2023/09/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面向对象分析与设计课程介绍软件系统开发的两个重要阶段：分析、设计 分析：发现正确的问题 设计：发现正确的解决方案 分析+设计&#x3D;建模（modeling） 建模的结果就是模型。 软件开发有两种思维方式：面向过程和面向对象 面向过程（结构化方法）   - 典型如C语言、Pascal，侧重于如何分解和编写方法。    - 对问题领域的映射是间接的。    - 系统需要完成的功能，分配到各个函数。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdn.net/20181008093115810?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjkyNzI2NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181008093517367?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjkyNzI2NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201222211634157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzUxNDg5OQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201222211648712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzUxNDg5OQ==,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2023-09-12T01:55:13.000Z">
-<meta property="article:modified_time" content="2023-09-12T01:56:47.107Z">
+<meta property="article:modified_time" content="2023-11-11T10:32:11.390Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="技术">
+<meta property="article:tag" content="面向对象分析">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20181008093115810?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjkyNzI2NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -91,7 +98,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">38.3k</span>
+    总字数 <span class="post-count">41.8k</span>
 </nav>
 
     </div>
@@ -174,12 +181,179 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：0字 | 预计阅读时长：1分钟
+    字数：3.6k字 | 预计阅读时长：12分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="面向对象分析与设计"><a href="#面向对象分析与设计" class="headerlink" title="面向对象分析与设计"></a>面向对象分析与设计</h1><h2 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h2><p>软件系统开发的两个重要阶段：分析、设计</p>
+<p><em><strong>分析：发现正确的问题</strong></em></p>
+<p><em><strong>设计：发现正确的解决方案</strong></em></p>
+<p>分析+设计&#x3D;建模（modeling）</p>
+<p>建模的结果就是模型。</p>
+<p>软件开发有两种思维方式：面向过程和面向对象</p>
+<h3 id="面向过程（结构化方法）"><a href="#面向过程（结构化方法）" class="headerlink" title="面向过程（结构化方法）"></a>面向过程（结构化方法）</h3><pre><code>   - 典型如C语言、Pascal，侧重于如何分解和编写方法。
+   - 对问题领域的映射是间接的。
+   - 系统需要完成的功能，分配到各个函数。
+   - 每个函数代码量一般较小。
+   - 系统从主函数main()开始执行，通过不断的函数调用完成任务。
+   - 过程：需要自顶向下逐层的功能分解。
+   - 结果：一系列的 模块+接口。
+   - 优点：直接反映用户需求，上手快。
+     缺点：对于复杂领域问题，容易走错路，导致修改难，适应性差。
+</code></pre>
+<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><pre><code>   - 典型如C++和Java，侧重于对象和类的辨识和设计。 
+   - 面向对象的分析与设计（OOAD），蕴含一系列的概念和方法：
+      对象、类、继承、封装、聚合、关联、消息、多态、抽象...
+   - 对问题领域的映射是直接的和如实的：抽象出对象和类，并将数据和方法进行封装，利用继承、多态等技术进行设计...
+   - 从主函数开始执行，通过对象的相互协调调用完成任务。
+</code></pre>
+<p><em><strong>UML：Unified Modeling Language</strong></em></p>
+<h2 id="面向对象的基本概念"><a href="#面向对象的基本概念" class="headerlink" title="面向对象的基本概念"></a>面向对象的基本概念</h2><p>类、对象、封装、继承、多态</p>
+<p>封装：受保护的类的属性和方法，不被外界访问</p>
+<p>继承：定义子类时，保留父类方法和属性和方法</p>
+<p>多态：在继承的版本上表现出不同的版本</p>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>包含三个区域：类名、属性、方法</p>
+<p>对象时类的实例，类是对象的模板</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>基本原理：子类继承父类的属性和方法。</p>
+<pre><code>    - 子类还可以增加新的属性和方法。
+</code></pre>
+<ul>
+<li>子类还可以覆盖父类的属性和方法（overriding）。      </li>
+<li>在Java中，子类只能继承一个父类；在C++中则可以多重继承。</li>
+</ul>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>基本原理：需要父类对象时，可以用子类对象替代。</p>
+<ul>
+<li>消息发送方不需要知道消息接收方属于那个子类。</li>
+<li>消息接收者可以按自己的方式处理消息。</li>
+<li>也就是说，对于同一个消息，每个接受方按自己的方式处理。</li>
+</ul>
+<h3 id="聚合-组合"><a href="#聚合-组合" class="headerlink" title="聚合&#x2F;组合"></a>聚合&#x2F;组合</h3><p>继承：子类继承父类。is a ：a car is a vehicle</p>
+<p>聚合：一个物体是另一个物体的一部分，has a。“A car has wheels”。<em><strong>聚合关系是传递的，非对称的。</strong></em></p>
+<p>组合：聚合关系的变型，是更强的聚合，整体控制着部分的生命，整体没有了，部分也没有了。“手与手指”。</p>
+<h3 id="接口-实现"><a href="#接口-实现" class="headerlink" title="接口&#x2F;实现"></a>接口&#x2F;实现</h3><pre><code>    - 对于软件系统：内部由大量的互相关联的类构成，当对其中某一个类进行修改的时候，不能影响其它的类。
+    - 接口描述一个类的用户如何与这个类交互。
+    - 实现：完成接口所定义的功能，如类、构件等完成的任务。
+    - 对于实现的改变，不影响接口，也就不影响使用了该接口的软件。
+    - 也就是说，接口/实现都要遵从“interface specification”。
+</code></pre>
+<h3 id="Coad和Yourdon的观点"><a href="#Coad和Yourdon的观点" class="headerlink" title="Coad和Yourdon的观点"></a>Coad和Yourdon的观点</h3><p>***** <strong>面向对象</strong> <strong>&#x3D;</strong> <strong>对象</strong> <strong>+</strong> <strong>分类</strong> <strong>+</strong> <strong>继承</strong> <strong>+</strong> <strong>消息通信</strong></p>
+<p> ***** <strong>面向对象的基本建模原则：</strong>抽象，封装，继承，分类</p>
+<p> ***** *<em>对象：</em>***客观现实世界中一个实际存在的事物</p>
+<p> ***** <strong>类：****具有相同属性和行为的一组对象的集合（抽象性）</strong></p>
+<p>  *** 封装：**<strong>把对象的属性和行为组成一个独立的系统单位，并尽可能隐蔽对象的内部细节</strong></p>
+<p>  ***** <strong>继承：****特殊类的对象拥有其一般类的全部属性和行为</strong></p>
+<p><em><strong>多态：</strong></em> <em><strong>指在一般类中定义的属性或行为，被特殊类继承之后，可以具有不同的数据类型或表现出不同的行为</strong></em></p>
+<p> <em><strong>消息通信：对象之间只能通过消息进行通信，所有相关对象之间相互协作完成软件功能</strong></em></p>
+<h3 id="面向对象语言"><a href="#面向对象语言" class="headerlink" title="面向对象语言"></a>面向对象语言</h3><p>Simula：面向对象语言的基本思想源于Simula</p>
+<p>Smalltalk：公认的历史上第二个面向对象的程序设计语言和第一个真正的集成开发环境</p>
+<h3 id="软件生命周期"><a href="#软件生命周期" class="headerlink" title="软件生命周期"></a>软件生命周期</h3><p>指一个软件从提出开发要求开始，到软件报废为止的整个时期。</p>
+<p>生命周期的阶段：问题定义、可行性分析、需求分析、总体（概要）设计、详细设计、编码、测试、维护</p>
+<p>面向对象的分析（OOA）：根据系统要求，找出所有的对象，对象的属性及方法。根据对象的共性，定义类。</p>
+<p>面向对象的设计（OOD）：对象属性方法三者封装在一起。对象之间的协作考消息通信实现。</p>
+<h3 id="Coad-Yourdon方法"><a href="#Coad-Yourdon方法" class="headerlink" title="Coad &amp; Yourdon方法"></a>Coad &amp; Yourdon方法</h3><p>OOA和OOD采用完全一致的方法。</p>
+<p>主要概念：对象，类，属性，服务，整体-部分结构，一般-特殊结构，实例连接，消息连接，主题</p>
+<p>OOA模型包含5层：主题层，类和对象层，结构层，属性层，服务层</p>
+<h3 id="RDD方法"><a href="#RDD方法" class="headerlink" title="RDD方法"></a>RDD方法</h3><p>职责驱动法RDD，又称CRC（类-责任-协作）法。</p>
+<p>核心: ①用类所承担的责任来描述系统；②用索引卡（即CRC卡）来捕获初始的类、责任和协作，同时也记录超类-子类关系以及由超类定义的公共职责</p>
+<ul>
+<li>工作步骤：<br> (1)识别类和职责。  (2)分配职责。  (3)寻找协作。 (4)细化。</li>
+</ul>
+<h3 id="面向对象方法的优缺点"><a href="#面向对象方法的优缺点" class="headerlink" title="面向对象方法的优缺点"></a>面向对象方法的优缺点</h3><p>优点：</p>
+<p>软件质量评价标准（13条）：正确性、灵活性及可靠性(健壮性)、可维护性与可扩展性、可重用性及通用性、互操作性、效率、可移植性、可验证性、安全性、友善性、可描述性及可理解性。</p>
+<p>对模块性的支持：- 5个标准，即可分解性、组合性、可理解性、连续性和保护性。</p>
+<p>对软件开发过程的支持：软件工程的演化式开发方法具有能适应需求变化、灵活、可扩展、重用等优点，面向对象方法有力地支持了这样的开发模式，从而促进了大型软件系统的开发。</p>
+<p><em><strong>封装+继承+标识&#x3D;可重用性+可扩展性+丰富的语义</strong></em></p>
+<h3 id="面向对象的分析与设计的一般过程"><a href="#面向对象的分析与设计的一般过程" class="headerlink" title="面向对象的分析与设计的一般过程"></a>面向对象的分析与设计的一般过程</h3><p><strong>1.</strong> <strong>描述需求</strong></p>
+<p><strong>2.</strong> <strong>识别潜在对象</strong></p>
+<p><strong>3.</strong> <strong>筛选对象</strong></p>
+<p><strong>4.</strong> <strong>对象的命名</strong></p>
+<p><strong>5.</strong> <strong>识别对象的属性</strong></p>
+<p><strong>6.</strong> <strong>识别对象的行为</strong></p>
+<p><strong>7.</strong> <strong>识别对象所属的类</strong></p>
+<p><strong>8.</strong> <strong>定义类的结构</strong></p>
+<p> <strong>8.1</strong> <strong>整体部分结构</strong></p>
+<p> <strong>8.2</strong> <strong>一般特殊结构</strong></p>
+<p> <strong>8.3</strong> <strong>实例连接</strong></p>
+<p> <strong>8.4</strong> <strong>消息连接</strong></p>
+<p><strong>9.</strong> <strong>通过在类的操作中编写代码，完成一项功能</strong></p>
+<p>§<strong>10.</strong> <strong>通过消息连接（即类之间的协作），完成一项功能</strong></p>
+<h2 id="统一建模语言UML概述"><a href="#统一建模语言UML概述" class="headerlink" title="统一建模语言UML概述"></a>统一建模语言UML概述</h2><h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><p>模型：为了理解事物而对事物做出的一种抽象，是对事物规范的、无歧义的描述；忽略了非本质的细节。</p>
+<p>模型的分类：数学模型、描述模型、图形模型</p>
+<p>建模的原则：准确、分层、分治、标准</p>
+<h3 id="UML的概念"><a href="#UML的概念" class="headerlink" title="UML的概念"></a>UML的概念</h3><p><em><strong>UML：Unified Modeling Language（统一建模语言）的首字母缩写词</strong></em></p>
+<pre><code>    - 是一种建模语言，不是一种建模方法
+    - 用于建立分析和设计模型，不是用于编程
+    - 是一种已被OMG采纳的建模语言规范（specification），一般不称为standard, 部分采用形式化语言的定义方式，但并不严格。
+    - 故不是形式化语言，不能编译或解释执行。
+</code></pre>
+<p>UML的特点：统一的标准、面向对象、可视化、独立于过程、概念明确</p>
+<p>UML的构成：3个要素：基本构造块、规则、公共机制</p>
+<p>基本构造块：事物（结构、行为、分组、注释）、关系（依赖、关联、泛化、实现）、图（<em><strong>十种，其中，类图是核心，OOAD的目的，就是获取类图，也就确定了逻辑代码的框架，也能发现设计中的问题，优化代码</strong></em>）</p>
+<p>规则：名字、作用域、可见性、完整性、执行</p>
+<p>公共机制：规范说明、修饰、公共划分、扩展机制</p>
+<p>事物、关系——模型元素</p>
+<h4 id="事物"><a href="#事物" class="headerlink" title="事物"></a>事物</h4><ul>
+<li>结构事物<br>  - UML模型中的名词，通常是模型的静态部分，描述概念元素或物理元素<br>  - 总称为类目，包括类、接口、协作、用例、主动类、组件…。<ul>
+<li>行为事物<ul>
+<li>UML模型中的动词，通常是模型的动态部分，描述跨越时间&#x2F;空间的行为。</li>
+<li>包括交互、状态机和活动。</li>
+</ul>
+</li>
+<li>分组事物<ul>
+<li>UML模型的组织部分，是一些由模型分解成的“盒子”。</li>
+<li>主要的分组事物是包。整个模型可以看成是一个根包，它间接包含了模型中的所有内容。子系统是另一种特殊的包。</li>
+</ul>
+</li>
+<li>注释事物<ul>
+<li>UML模型的解释部分，用来描述、说明和标注模型的任何元素。</li>
+<li>主要的注释事物是注解，提供依附于元素之上的信息的文本说明</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h4><pre><code>* 依赖关系是一种使用关系，说明一个事物使用另一个事物的信息和服务（一条实线）
+* 关联关系是一种结构关系，说明一个事物的实例与另一个事物的实例间的静态联系（虚线+三角箭头）
+* 泛化关系是一般事物（称为超类或父类）和该事物的较为特殊的种类（称为子类）之间的继承关系（虚线+指向符）
+* 实现关系是事物之间的语义关系，说明一个事物提供了另一个事物的功能契约的实现（实线+三角箭头）
+</code></pre>
+<h3 id="UML的视图"><a href="#UML的视图" class="headerlink" title="UML的视图"></a>UML的视图</h3><p>视图：</p>
+<pre><code>    - 视图代表在一个特定的方面对系统的组织和结构进行的投影
+            - 视图又由一种或多种模型图构成
+            - 可以将所有UML图归属为4种建模技术
+         （1）需求建模：通过用例图描述需求。
+         （2）静态建模：通过类图和对象图描述软件系统的静态元素。
+         （3）动态建模。通过协作图、顺序图、活动图、状态图描述静态元素的行为。
+         （4）构架建模。通过组件图和部署图，在多个层次（如表示、业务、资源）上描述软件系统的构架。
+</code></pre>
+<ul>
+<li>UML把软件体系结构划分为5个视图<br>  - 每一个视图又由一种或多种模型图构成<br>      - 所有视图结合在一起就描述了系统的完整画面。<br>      - 5种视图：<br>      - 用例视图：由用例图表现。需求分析，定义边界，关注系统功能<br>      - 逻辑视图：静态部分由类图和对象图表现；动态部分由顺序图、协作图、状态图和活动图表现。逻辑视图定义系统的实现逻辑。<br>      - 进程视图：由顺序图、协作图、状态图和活动图表现。描述给定时刻系统中不同的执行进程，说明系统中并发执行和同步的情况。焦点是通过性能、可伸缩性和吞吐量来评价进程的执行。<br>      - 实现视图：由组件图表现。说明代码的结构，描述的是组成一个软件系统的各个物理部件，它们以各种方式组合起来，构成一个可实际运行的系统。<br>      - 部署视图：由部署图表现。描述软件系统在计算机硬件系统和网络上的安装、分发和分布情况。</li>
+</ul>
+<p><em><strong>这五个视图一般称为：4+1视图，用例视图是4+1的核心</strong></em></p>
+<ul>
+<li>视图的参与人员<br>  - 用例视图：使用者：最终用户、开发人员、测试人员<br>      - 逻辑视图：使用者：分析人员、开发人员<br>      - 进程视图：使用者：分析人员、开发人员、系统集成人员<br>      - 实现视图：使用者：最终用户、开发人员、测试人员、项目管理者<br>      - 部署视图：使用者：最终用户、开发人员、系统集成人员、测试人员</li>
+</ul>
+<h2 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h2><p>构成：边界、参与者、用例、关系</p>
+<h3 id="参与者"><a href="#参与者" class="headerlink" title="参与者"></a>参与者</h3><p><strong>指系统以外的、需要使用系统或与系统交互的外部实体。</strong></p>
+<p>可分为：人、外部设备、外部系统</p>
+<p>​            参与者是人：用“小人图”          </p>
+<p>参与者是某个系统：用方框图，构造《actor》</p>
+<h4 id="参与者之间的关系"><a href="#参与者之间的关系" class="headerlink" title="参与者之间的关系"></a>参与者之间的关系</h4><pre><code>* 泛化关系：一般参与者与特殊参与者之间的关系（特殊指向一般）
+                           实线 + 空心箭头
+</code></pre>
+<p><img src="https://img-blog.csdn.net/20181008093115810?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjkyNzI2NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="20181008093115810 (408×386) (csdn.net)"></p>
+<h3 id="参与者和用例之间的关系"><a href="#参与者和用例之间的关系" class="headerlink" title="参与者和用例之间的关系"></a>参与者和用例之间的关系</h3> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 关联关系：起通信的作用，即描述了：一个参与者完成系统的一项功能。用实线表示。是一种拥有的关系，它使一个类知道另一个类的属性和方法；如：老师与学生，丈夫与妻子关联可以是双向的，也可以是单向的。双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20181008093517367?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjkyNzI2NA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="20181008093517367 (349×378) (csdn.net)"></p>
+<h3 id="用例之间的的关系"><a href="#用例之间的的关系" class="headerlink" title="用例之间的的关系"></a>用例之间的的关系</h3><p>用例之间的关系：泛化关系，包含关系，扩展关系</p>
+<p>包含关系：基本用例的行为必然执行包含用例的行为，用《include》</p>
+<p>基用例必须和包含用例一起使用才够完整，包含用例也必然被执行。包含关系在用例图中使用带箭头的虚线表示(在线上标注&lt;&gt;)，箭头从基用例指向包含用例。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201222211634157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzUxNDg5OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="20201222211634157.png (786×385) (csdnimg.cn)"></p>
+<p>扩展关系：基本用例的行为条件执行扩展用例的行为，用《extend》</p>
+<p>扩展用例是对基用例的扩展，即使没有扩展用例的参与，也可以完成一个完整的功能。扩展在用例图中使用带箭头的虚线表示(在线上标注&lt;&gt;)，箭头从扩展用例指向基用例。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201222211648712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzUxNDg5OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="20201222211648712.png (873×408) (csdnimg.cn)"></p>
+
       
 
       
@@ -192,7 +366,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">面向对象分析</a>
         		</li>
       		
 		</ul>
@@ -311,7 +485,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.</span> <span class="toc-text">面向对象分析与设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">课程介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%EF%BC%88%E7%BB%93%E6%9E%84%E5%8C%96%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">面向过程（结构化方法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.2.</span> <span class="toc-text">面向对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">面向对象的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.2.1.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">1.2.2.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">1.2.3.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%9A%E5%90%88-%E7%BB%84%E5%90%88"><span class="toc-number">1.2.4.</span> <span class="toc-text">聚合&#x2F;组合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3-%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">接口&#x2F;实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Coad%E5%92%8CYourdon%E7%9A%84%E8%A7%82%E7%82%B9"><span class="toc-number">1.2.6.</span> <span class="toc-text">Coad和Yourdon的观点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.7.</span> <span class="toc-text">面向对象语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.2.8.</span> <span class="toc-text">软件生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Coad-Yourdon%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.9.</span> <span class="toc-text">Coad &amp; Yourdon方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RDD%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.10.</span> <span class="toc-text">RDD方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.2.11.</span> <span class="toc-text">面向对象方法的优缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E4%B8%80%E8%88%AC%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.12.</span> <span class="toc-text">面向对象的分析与设计的一般过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80UML%E6%A6%82%E8%BF%B0"><span class="toc-number">1.3.</span> <span class="toc-text">统一建模语言UML概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.3.2.</span> <span class="toc-text">UML的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E7%89%A9"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">事物</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">关系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML%E7%9A%84%E8%A7%86%E5%9B%BE"><span class="toc-number">1.3.3.</span> <span class="toc-text">UML的视图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E5%9B%BE"><span class="toc-number">1.4.</span> <span class="toc-text">用例图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E4%B8%8E%E8%80%85"><span class="toc-number">1.4.1.</span> <span class="toc-text">参与者</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E4%B8%8E%E8%80%85%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">参与者之间的关系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E4%B8%8E%E8%80%85%E5%92%8C%E7%94%A8%E4%BE%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.2.</span> <span class="toc-text">参与者和用例之间的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.3.</span> <span class="toc-text">用例之间的的关系</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -436,6 +610,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">嵌入式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">面向对象分析</a>
               </li>
             
             <div class="clearfix"></div>
