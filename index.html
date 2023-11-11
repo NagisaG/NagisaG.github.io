@@ -88,7 +88,7 @@
 	</header>		
 </div>
 <nav>
-    总字数 <span class="post-count">41.8k</span>
+    总字数 <span class="post-count">43.7k</span>
 </nav>
 
     </div>
@@ -261,7 +261,7 @@
         
       </header>
 <div align="center" class="post-count">
-    字数：3.6k字 | 预计阅读时长：12分钟
+    字数：5.5k字 | 预计阅读时长：18分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -433,6 +433,145 @@
 <p>扩展关系：基本用例的行为条件执行扩展用例的行为，用《extend》</p>
 <p>扩展用例是对基用例的扩展，即使没有扩展用例的参与，也可以完成一个完整的功能。扩展在用例图中使用带箭头的虚线表示(在线上标注&lt;&gt;)，箭头从扩展用例指向基用例。</p>
 <p><img src="https://img-blog.csdnimg.cn/20201222211648712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzUxNDg5OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="20201222211648712.png (873×408) (csdnimg.cn)"></p>
+<h2 id="类图和对象图"><a href="#类图和对象图" class="headerlink" title="类图和对象图"></a>类图和对象图</h2><p>对象：一般意义上，是现实世界中一个实际存在的事物<br>        - 对象可以是有形的（比如一辆汽车），也可以是无形的（比如一项计划）<br>                - 对象是一个独立单位，具有自己的静态特征和动态特征。<br>             静态特征是可以用某种数据来描述的属性<br>             动态特征是对象所表现的行为或对象所具有的功能</p>
+<p>类：具有相同属性和服务的一组对象的集合。</p>
+<h3 id="类图的表示"><a href="#类图的表示" class="headerlink" title="类图的表示"></a>类图的表示</h3><p>四个部分：分为三个隔区的长方形，包含名称、属性、操作、职责</p>
+<p>类的可见性：       </p>
+<p>​            +（公有属性Public）：能够被系统中其他任何操作查看和使用<br>​            -（私有属性Private）：仅在类内部可见，只有类内部的操作才能存取该属性<br>​            #（受保护属性Protected）：供类中的操作存取，也可被其子类使用</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224123104360.png" alt="20200224123104360.png (253×406) (csdnimg.cn)"></p>
+<h4 id="类的作用域"><a href="#类的作用域" class="headerlink" title="类的作用域"></a>类的作用域</h4><pre><code>* 对象作用域指的是此类的每个对象都有一个自己的副本，彼此不共享属性值
+* 类作用域指的是只有一个副本，类的所有对象共享此副本。即共享属性值
+</code></pre>
+<h4 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h4><p>关联关系：一个类的实例与另一个类的实例在结构上的静态联系</p>
+<p>特征：</p>
+<pre><code>    - 一个类的属性的数据类型是另一个类的定义
+    - 一个类的部分对象与另一个类的部分对象存在属性值上的联系
+    - 关联关系一旦建立，系统运行与否它都存在
+
+* 关联类（Association Class）：如果在具有关联关系的类中，存在一个属性放在哪个类中都不合适的情况，就可以使用关联类
+* ![20200224114425270.png (501×482) (csdnimg.cn)](https://img-blog.csdnimg.cn/20200224114425270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3OTg5OTgw,size_16,color_FFFFFF,t_70)
+</code></pre>
+<ul>
+<li>用虚线表示关联类的关联关系</li>
+</ul>
+<p>​    * 关联约束：对于关联可以加上一些约束，以加强关联的含义</p>
+<ul>
+<li>限定关联：在关联端紧靠源类图标处可以有限定符。限定符的作用就是在给定关联一端的一个对象和限定符值以后，可确定另一端的一个对象或对象集</li>
+</ul>
+<h3 id="自反关联"><a href="#自反关联" class="headerlink" title="自反关联"></a>自反关联</h3><p>一个类与自身关联，自返关联虽然只有一个被关联的类，但有两个关联端，每个关联端的角色不同。</p>
+<p>自返关联虽然只有一个被关联的类，但有两个关联端，每个关联端的角色不同。</p>
+<ul>
+<li><p>N元关联：3个或3个以上类之间的关联。</p>
+<ul>
+<li><p>在同一时刻，每个类必须确定一个对象。</p>
+</li>
+<li><p>例：一个运动员（player）在某一个年份（year）中在某一个运动队（team）中服役。    </p>
+</li>
+<li><p>聚合（聚集）关系：是一种特殊形式的关联，表示类之间整体与部分的关系。</p>
+</li>
+<li><p>整体与部分无相同的生存期。整体不存在了，部分仍能存在。</p>
+</li>
+<li><p>它用端点带有空菱形的线段表示， 空菱形与‘整体’类相连接</p>
+</li>
+</ul>
+</li>
+<li><p>组成（组合）关系：是一种特殊形式的关联，表示类之间整体与部分的关系。</p>
+<ul>
+<li>整体与部分有相同的生存期。整体不存在了，部分也不能存在。 </li>
+<li>用端点带有实菱形的线段表示，实菱形与‘整体’类相连接</li>
+</ul>
+</li>
+</ul>
+<h3 id="依赖关系"><a href="#依赖关系" class="headerlink" title="依赖关系"></a>依赖关系</h3><pre><code>* 定义：一个类的结构上的变化会影响到另一个类（代码级）
+* 特征：
+    - 一个类的方法的参数的数据类型是另一个类的定义
+    - 一个类的方法使用了另一个类的属性
+    - 一个类的方法调用了另一个类的方法
+    - 一个类的方法实例化了另一个类的对象
+    - 一个类的每一个对象与另一个类的所有（或部分）对象存在操作运行上的联系
+    - 依赖关系只有在系统运行时它存在，系统不运行时它不存在
+    虚线+箭头
+</code></pre>
+<ul>
+<li><p>关联关系：</p>
+<ul>
+<li>静态的</li>
+<li>数据（指属性值）级别上的</li>
+<li>部分的</li>
+<li>有多重性</li>
+<li>实体类之间存在关联关系</li>
+</ul>
+</li>
+<li><p>依赖关系：</p>
+<ul>
+<li>动态的</li>
+<li>代码级别上的</li>
+<li>全体的</li>
+<li>无多重性</li>
+<li>{边界类|控制类}和{边界类|控制类|实体类}之间存在依赖关系</li>
+</ul>
+</li>
+</ul>
+<h3 id="泛化关系"><a href="#泛化关系" class="headerlink" title="泛化关系"></a>泛化关系</h3><ul>
+<li>定义：一般类与特殊类之间的继承（代码级）<ul>
+<li>特征：<ul>
+<li>一般类定义了共同的属性和方法</li>
+<li>特殊类继承了一般类的属性和方法</li>
+<li>特殊类还可以定义自己的属性和方法</li>
+<li>泛化关系只有在系统运行时它存在，系统不运行时它不存在，除非要将两类对象永久保存</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>实线+空心箭头</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224104737664.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3OTg5OTgw,size_16,color_FFFFFF,t_70" alt="20200224104737664.png (311×210) (csdnimg.cn)"></p>
+<h3 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h3><p>抽象类<br>    * 抽象类（abstract class）：是不能直接产生实例的类。<br>        * 抽象类可以有属性，但是必然存在某些方法只是一些声明，而没有具体的实现。其它的一些方法可以有实现。<br>        * 抽象类一般作为超类（或基类、父类）存在，用于描述其他类的公共属性和操作。</p>
+<p>接口<br>    * 接口（interface）：一个类的对外可见的一组操作的规范，它定义了类对外提供的服务。<br>        * 接口包含操作但不包含属性。所有的操作只是一些声明，而没有具体的实现。<br>        * 不能对接口实例化。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224105008943.png" alt="20200224105008943.png (176×221) (csdnimg.cn)"></p>
+<p> 抽象类与接口的对比<br>    * 共同点<br>        - 两者都有方法没有提供实现代码<br>        - 提供实现代码的其他类，实现的算法不同，会导致两者具有不同的行为。因此，很容易扩展软件系统的功能。</p>
+<pre><code>* 不同点 
+    - 抽象类有些方法可以提供实现代码，接口所有的方法都没有提供实现代码
+    - 抽象类只能被继承，接口只能被实现
+</code></pre>
+<h2 id="类的类型"><a href="#类的类型" class="headerlink" title="类的类型"></a>类的类型</h2><p> UML中有3种主要的类版型<br>    * 边界类（boundary class）<br>        * 控制类（control class）<br>        * 实体类（entity class）<br>             引入边界类、控制类和实体类的概念，有助于分析人员和设计人员确定系统中的类</p>
+<h2 id="对象图"><a href="#对象图" class="headerlink" title="对象图"></a>对象图</h2><pre><code>* 表示一组对象及它们之间的联系。
+* 是系统的详细状态在某一时刻的快照，常用于表示复杂的类图的一个实例。
+* 对象是类的实例，对象之间的链是类之间的关联的实例。因此，对象图实质上是具有关联关系的类图的实例
+* 对象图所建立的对象模型描述的是某种特定的情况，而类图所建立的模型描述的是通用的情况。
+</code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>类图</strong></th>
+<th><strong>对象图</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>在类图中，每个类包含三部分：类名、类的属性和类的操作</strong></td>
+<td><strong>在对象图中，每个对象包含二部分：对象名、对象属性</strong></td>
+</tr>
+<tr>
+<td><strong>类的名称栏只包含类名</strong></td>
+<td><strong>对象的名称栏包含对象名和类名</strong></td>
+</tr>
+<tr>
+<td><strong>类的属性栏定义了所有属性的特征</strong></td>
+<td><strong>对象的属性栏定义了属性的当前值</strong></td>
+</tr>
+<tr>
+<td><strong>类中列出了操作</strong></td>
+<td><strong>对象图中的对象不包含操作，因为对于属于同一个类的对象，其操作是相同的</strong></td>
+</tr>
+<tr>
+<td><strong>类中使用了关联连接，关联中使用关联名、角色以及约束等特征定义</strong></td>
+<td><strong>对象使用链进行连接，链中包含名称、角色</strong></td>
+</tr>
+<tr>
+<td><strong>类是对象的抽象</strong></td>
+<td><strong>对象是客观存在的抽象，对象是类的实例</strong></td>
+</tr>
+</tbody></table>
 
       
 
